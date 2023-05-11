@@ -25,6 +25,10 @@ alias aliases="list_fish_aliases"
 alias vi="nvim"
 alias vim="nvim"
 
+# APT
+alias apt="sudo apt-get"
+alias cs="sudo apt-cache search"
+
 # CLOUDOPS
 alias gam="bin/gam/gam"
 alias iftop="sudo iftop"
