@@ -1,0 +1,35 @@
+[core]
+	editor = nvim
+	pager = less -x2
+	autocrlf = input
+[user]
+	signingkey = E3BD560BD7BE8470
+	email = 48670+vieko@users.noreply.github.com
+	name = Vieko Franetovic
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = red reverse
+  local = blue
+  remote = green
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+	plain = white
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[diff]
+	mnemonicprefix = true
+[alias]
+	st = status -s
+	la = "!git config -l | grep alias | cut -c 7-"
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
