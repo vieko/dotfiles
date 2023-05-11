@@ -19,6 +19,7 @@ alias st="fast"
 alias bat="batcat"
 alias python="python3"
 alias bottom="btm"
+alias lg="lazygit"
 alias aliases="list_fish_aliases"
 
 # EDITOR
