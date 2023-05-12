@@ -40,4 +40,4 @@ alias iotop="sudo iotop"
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
 
 # ONLOAD
-load_nvm > /dev/stderr
+load_nvm > /dev/null
