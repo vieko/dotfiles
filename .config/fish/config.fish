@@ -20,7 +20,8 @@ alias bat="batcat"
 alias python="python3"
 alias bottom="btm"
 alias lg="lazygit"
-alias aliases="list_fish_aliases"
+alias fa="list_aliases"
+alias sc="source ~/.config/fish/config.fish"
 
 # EDITOR
 alias vi="nvim"
@@ -35,3 +36,8 @@ alias gam="bin/gam/gam"
 alias iftop="sudo iftop"
 alias iotop="sudo iotop"
 
+# FIXES
+alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
+
+# ONLOAD
+load_nvm > /dev/stderr
