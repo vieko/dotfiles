@@ -4,7 +4,7 @@
 	autocrlf = input
 	
 [user]
-	signingkey = E3BD560BD7BE8470
+	; signingkey = E3BD560BD7BE8470
 	email = 48670+vieko@users.noreply.github.com
 	name = Vieko Franetovic
 	
