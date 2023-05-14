@@ -38,6 +38,3 @@ alias iotop="sudo iotop"
 
 # FIXES
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
-
-# ONLOAD
-load_nvm > /dev/null
