@@ -1,0 +1,29 @@
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+env:
+  TERM:  alacritty
+window:
+  padding:
+    x: 8
+    y: 8
+  title: Summoning Demons 
+  dynamic_title: false
+font:
+  size: 10
+  offset:
+    x: 0 
+    y: 0 
+  normal:
+    family: MonoLisaMedium Nerd Font
+    style: Medium
+  bold:
+    family: MonoLisaSemiBold Nerd Font 
+    style: Semibold
+  italic:
+    family: MonoLisaMedium Nerd Font
+    style: Italic
+shell:
+  program: /usr/bin/fish
