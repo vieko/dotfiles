@@ -22,6 +22,8 @@ alias bottom="btm"
 alias lg="lazygit"
 alias fa="list_aliases"
 alias sc="source ~/.config/fish/config.fish"
+alias cl="clear"
+alias re="reset"
 
 # EDITOR
 alias vi="nvim"
