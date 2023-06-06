@@ -24,6 +24,7 @@ alias fa="list_aliases"
 alias sc="source ~/.config/fish/config.fish"
 alias cl="clear"
 alias re="reset"
+alias fefx="pw-metadata -n settings 0 clock.force-quantum 2048"
 
 # EDITOR
 alias vi="nvim"
