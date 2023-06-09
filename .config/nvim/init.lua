@@ -38,6 +38,11 @@ require("lazy").setup("plugins", {
   },
 })
 
+function clear_search_highlight()
+  vim.cmd(':noh')
+end
+vim.api.nvim_set_keymap('n', '<Leader>n', ':lua clear_search_highlight()<CR>', { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap("x", "gc", "<Plug>VSCodeCommentary", {})
 vim.api.nvim_set_keymap("n", "gc", "<Plug>VSCodeCommentary", {})
 vim.api.nvim_set_keymap("o", "gc", "<Plug>VSCodeCommentary", {})
