@@ -1,7 +1,8 @@
-vim.g.mapleader = [[ ]]
-vim.g.maplocalleader = [[,]]
+-- SET LEADER
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-
+-- INSTALL Package Manager
 local lazypath = vim.fn.stdpath("data") .. "/nvim-vscode/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -10,16 +11,17 @@ if not vim.loop.fs_stat(lazypath) then
     "--filter=blob:none",
     "--single-branch",
     "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
     lazypath,
   })
 end
-
-vim.opt.runtimepath:prepend(lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_node_provider = 0
+
 require("lazy").setup("plugins", {
   defaults = { lazy = true },
   performance = {
