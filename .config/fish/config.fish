@@ -1,5 +1,10 @@
 set fish_greeting
 
+set -Ux PAGER most
+set -Ux MANPAGER most
+set -Ux EDITOR nvim
+set -Ux VISUAL nvim
+
 # DOTFILES
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
