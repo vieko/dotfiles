@@ -26,13 +26,14 @@ return {
     opts = { labeled_modes = "nv" },
     event = "VeryLazy",
   },
-  { 'machakann/vim-sandwich', event = 'VeryLazy', enabled = true },
+  { 'machakann/vim-sandwich', event = 'VeryLazy', enabled = false },
   {
-    "echasnovski/mini.surround",
+    "echasnovski/mini.nvim",
     event = "VeryLazy",
     config = function()
-      require("mini.surround").setup {}
+      require("mini.surround").setup { search_method = 'cover_or_nearest' }
     end,
-    enabled = false
+    version = false,
+    enabled = true,
   },
 }
