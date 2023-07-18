@@ -46,3 +46,6 @@ alias iotop="sudo iotop"
 
 # FIXES
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
+
+# GAMES
+alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1 disown"
