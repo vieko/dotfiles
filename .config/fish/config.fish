@@ -44,6 +44,9 @@ alias gam="bin/gam/gam"
 alias iftop="sudo iftop"
 alias iotop="sudo iotop"
 
+# APPIMAGES
+alias heptabase="nohup ~/AppImages/Heptabase-1.9.0.AppImage >/dev/null 2>&1 disown"
+
 # FIXES
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
 
