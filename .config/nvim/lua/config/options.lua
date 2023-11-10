@@ -9,7 +9,9 @@ vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.fillchars = { eob = " " }
-vim.opt.foldenable = false
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
 vim.opt.guicursor = ""
 vim.opt.history = 100
 vim.opt.hlsearch = false

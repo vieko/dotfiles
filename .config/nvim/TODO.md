@@ -16,5 +16,5 @@
 - [x] REALLY SET UP Telescope
 - [x] MASSAGE init order
 - [x] ADD Git Plugin
-- [ ] COMPLETE leaders.lua
+- [ ] DEFINE Mappings for Which-Key
 - [ ] ENSURE it runs as needed on VSCode

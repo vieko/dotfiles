@@ -13,7 +13,8 @@ return {
             bold_basename = true,
             dim_context = false,
             alt_background = false,
-          }
+          },
+          which_key = true
         }
       }
     end,
