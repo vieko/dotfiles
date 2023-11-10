@@ -1,44 +1,27 @@
--- DEFAULTS
+-- SET Defaults
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.cmdheight = 0
-vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.cmdheight = 1
+--vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.copyindent = true
 vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.fillchars = { eob = " " }
-vim.opt.foldenable = true
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-vim.opt.history = 100
-vim.opt.ignorecase = true
-vim.opt.infercase = true
-vim.opt.laststatus = 3
-vim.opt.linebreak = true
-vim.opt.mouse = "a"
-vim.opt.preserveindent = true
+vim.opt.foldenable = false
+vim.opt.guicursor = ""
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.tabstop = 2
+vim.opt.termguicolors = true
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 8
 vim.opt.shiftwidth = 2
-vim.opt.showmode = false
-vim.opt.showtabline = 2
-vim.opt.sidescrolloff = 8
-vim.opt.smartcase = true
 vim.opt.smartindent = true
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.tabstop = 2
-vim.opt.termguicolors = true
-vim.opt.timeoutlen = 500
-vim.opt.undofile = true
 vim.opt.updatetime = 300
 vim.opt.virtualedit = "block"
-vim.opt.writebackup = false
-vim.g.highlighturl_enabled = true
-vim.g.codelens_enabled = true
-vim.g.lsp_handlers_enabled = true
--- USER SETTINGS
+
+-- SET User Settings
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.spell = false
@@ -46,7 +29,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.list = true
 vim.opt.listchars = {
-  -- eol = "↲",
+  --eol = "↲",
   tab = "» ",
   space = "·",
   extends = "›",
@@ -54,12 +37,7 @@ vim.opt.listchars = {
   nbsp = "␣",
 }
 vim.opt.colorcolumn = "80"
-vim.opt.shell = "fish"
-vim.opt.foldcolumn = "2"
-vim.g.mapleader = " "
-vim.g.autoformat_enabled = true
-vim.g.cmd_enabled = true
-vim.g.autopairs_enabled = true
-vim.g.diagnostics_mode = 3
-vim.g.icons_enabled = false
-vim.g.ui_notifications_enabled = true
+
+vim.cmd [[
+  highlight CopilotSuggestion guifg=#45475A ctermfg=8
+]]

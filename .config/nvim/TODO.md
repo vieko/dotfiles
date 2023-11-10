@@ -1,0 +1,20 @@
+# TODOS
+- [x] REMOVE Mason
+- [x] START OVER Lsp Zero
+- [x] SET UP tsserver
+- [x] SET UP eslint
+- [x] SET UP tailwindcss
+- [x] SET UP lua
+- [x] ENABLE vim on lua lsp
+- [x] SET UP Copilot
+- [x] ENABLE formatting on save
+- [x] THEME Copilot with Catppuccin
+- [ ] ADD Comments Plugin
+- [ ] ADD Autopairs Plugin
+- [ ] ADD Git Plugin
+- [ ] COMPLETE settings.lua
+- [ ] COMPLETE mappings.lua
+- [ ] COMPLETE leaders.lua
+- [ ] REALLY SET UP Telescope
+- [ ] MASSAGE init order
+- [ ] ENSURE it runs as needed on VSCode
