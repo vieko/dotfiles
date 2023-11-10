@@ -13,7 +13,7 @@
 - [x] ADD Autopairs Plugin
 - [x] COMPLETE options.lua
 - [x] COMPLETE mappings.lua
-- [x] REALLY SET UP Telescope
+- [ ] REALLY SET UP Telescope
 - [x] MASSAGE init order
 - [x] ADD Git Plugin
 - [ ] DEFINE Mappings for Which-Key
@@ -21,5 +21,9 @@
 - [ ] INSTALL tailwindcss-language-server on nix
 - [ ] INSTALL vscode-eslint-language-server on nix
 - [ ] INSTALL lua-language-server on nix
+- [ ] INSTALL Missing Plugins
+  - [ ] RESEARCH Quick Fix + nvim-bqf 
+  - [ ] ChatGPT.nvim
+  - [ ]
 - [ ] CONSIDER Mason
 - [ ] ENSURE it runs as needed on VSCode
