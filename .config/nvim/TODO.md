@@ -12,9 +12,9 @@
 - [ ] ADD Comments Plugin
 - [ ] ADD Autopairs Plugin
 - [ ] ADD Git Plugin
-- [ ] COMPLETE settings.lua
+- [x] COMPLETE options.lua
 - [ ] COMPLETE mappings.lua
 - [ ] COMPLETE leaders.lua
-- [ ] REALLY SET UP Telescope
-- [ ] MASSAGE init order
+- [x] REALLY SET UP Telescope
+- [x] MASSAGE init order
 - [ ] ENSURE it runs as needed on VSCode

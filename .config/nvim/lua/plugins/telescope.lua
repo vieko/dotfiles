@@ -6,7 +6,7 @@ return {
       {'nvim-lua/plenary.nvim'},
       {
         "debugloop/telescope-undo.nvim",
-        keys = { { "<leader>U", "<cmd>Telescope undo<cr>" } },
+        keys = {{ "<leader>U", "<cmd>Telescope undo<cr>" }},
         config = function()
           require("telescope").load_extension("undo")
         end,
@@ -64,6 +64,7 @@ return {
         },
         sorting_strategy = "ascending",
         winblend = 0,
+        file_ignore_patterns = { "node_modules", ".git", "undodir" },
       },
     },
   }
