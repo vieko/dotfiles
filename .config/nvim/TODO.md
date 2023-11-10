@@ -17,4 +17,9 @@
 - [x] MASSAGE init order
 - [x] ADD Git Plugin
 - [ ] DEFINE Mappings for Which-Key
+- [ ] INSTALL typescript-language-server on nix
+- [ ] INSTALL tailwindcss-language-server on nix
+- [ ] INSTALL vscode-eslint-language-server on nix
+- [ ] INSTALL lua-language-server on nix
+- [ ] CONSIDER Mason
 - [ ] ENSURE it runs as needed on VSCode
