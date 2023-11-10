@@ -23,7 +23,7 @@ vim.opt.preserveindent = true
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 8
 vim.opt.shiftwidth = 2
-vim.opt.showtabline = 2
+vim.opt.showtabline = 0
 vim.opt.sidescrolloff = 8
 vim.opt.smartcase = true
 vim.opt.smartindent = true
@@ -56,7 +56,3 @@ vim.opt.listchars = {
 }
 vim.opt.colorcolumn = "80"
 vim.opt.shell = "fish"
-
-vim.cmd [[
-  highlight CopilotSuggestion guifg=#45475A ctermfg=8
-]]

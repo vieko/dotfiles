@@ -9,12 +9,12 @@
 - [x] SET UP Copilot
 - [x] ENABLE formatting on save
 - [x] THEME Copilot with Catppuccin
-- [ ] ADD Comments Plugin
-- [ ] ADD Autopairs Plugin
-- [ ] ADD Git Plugin
+- [x] ADD Comments Plugin
+- [x] ADD Autopairs Plugin
 - [x] COMPLETE options.lua
-- [ ] COMPLETE mappings.lua
-- [ ] COMPLETE leaders.lua
+- [x] COMPLETE mappings.lua
 - [x] REALLY SET UP Telescope
 - [x] MASSAGE init order
+- [x] ADD Git Plugin
+- [ ] COMPLETE leaders.lua
 - [ ] ENSURE it runs as needed on VSCode
