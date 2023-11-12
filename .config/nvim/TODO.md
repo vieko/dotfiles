@@ -26,3 +26,5 @@
   - [ ] ChatGPT.nvim
 - [ ] CONSIDER Mason
 - [ ] ENSURE it runs as needed on VSCode
+- [ ] ADD Python Language Server
+- [ ] ADD Go Language Server
