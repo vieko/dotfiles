@@ -24,7 +24,7 @@
   - [ ] ChatGPT.nvim
 - [ ] ADD Python Language Server
 - [ ] ADD Go Language Server
-- [ ] DEFINE Mappings for Which-Key
+- [ ] REALLY SET UP Which-Key
 - [ ] REALLY SET UP Telescope
 - [x] REALLY Configure Catppuccin
 - [ ] CONSIDER Mason

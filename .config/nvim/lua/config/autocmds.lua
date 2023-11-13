@@ -34,6 +34,9 @@ vim.api.nvim_create_autocmd('User', {
   callback = require('neogit').close,
 })
 
+-- FORMAT ON SAVE for Lua
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
 -- AUTO SAVE with Conform
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   pattern = "*",

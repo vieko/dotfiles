@@ -21,6 +21,9 @@ return {
       { 'hrsh7th/cmp-nvim-lsp' },
     },
     config = function()
+      local ih = require('lsp-inlayhints')
+      ih.setup()
+
       local lsp_zero = require('lsp-zero')
       lsp_zero.extend_lspconfig()
 
@@ -52,6 +55,10 @@ return {
           { buffer = bufnr, remap = false, desc = "Code Action" })
         vim.keymap.set("n", "<leader>vf", function() vim.lsp.buf.format({ async = true }) end,
           { buffer = bufnr, remap = false, desc = "Format" })
+        vim.keymap.set("n", "<leader>bi", function() require('lsp-inlayhints').toggle() end,
+          { buffer = bufnr, remap = false, desc = "Toggle Inlay Hints" })
+        vim.keymap.set("n", "<leader>bo", function() vim.lsp.buf.format({ async = true }) end,
+          { buffer = bufnr, remap = false, desc = "Organize Imports" })
       end)
 
       -- Lua
@@ -60,7 +67,37 @@ return {
 
 
       -- TypeScript / JavaScript
-      require('lspconfig').tsserver.setup({})
+      require('lspconfig').tsserver.setup({
+        on_attach = function(client, bufnr)
+          ih.on_attach(client, bufnr)
+        end,
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = 'all',
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true, -- false if it becomes too noisy
+              includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            }
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayParameterNameHints = 'all',
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true, -- false if it becomes too noisy
+              includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            }
+          }
+        }
+      })
       -- require('typescript-tools').setup({})
 
       -- TailwindCSS
@@ -77,6 +114,9 @@ return {
       })
     end
   },
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+  }
   -- {
   --   "pmizio/typescript-tools.nvim",
   --   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },

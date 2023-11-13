@@ -28,6 +28,7 @@ return {
           },
           noice = false,
           neogit = true,
+          neotree = false,
           cmp = true,
           native_lsp = {
             enabled = true,
