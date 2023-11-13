@@ -58,16 +58,28 @@ return {
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
 
+
+      -- TypeScript / JavaScript
+      require('lspconfig').tsserver.setup({})
+      -- require('typescript-tools').setup({})
+
       -- TailwindCSS
       require('lspconfig').tailwindcss.setup({})
 
-      -- TypeScript / JavaScript
-      require('typescript-tools').setup({})
+      -- ESLint
+      require('lspconfig').eslint.setup({
+        on_attach = function(client, bufnr)
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            command = "EslintFixAll",
+          })
+        end,
+      })
     end
   },
-  {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-  }
+  -- {
+  --   "pmizio/typescript-tools.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  --   opts = {},
+  -- }
 }

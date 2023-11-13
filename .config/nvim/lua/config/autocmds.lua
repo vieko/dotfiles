@@ -1,5 +1,3 @@
-local C = require("catppuccin.palettes").get_palette("mocha")
-
 -- SET cursor line only in active window
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
   callback = function()
@@ -28,6 +26,7 @@ vim.cmd [[
   augroup END
 ]]
 
+-- SET Notify when Neogit Push is complete
 local group = vim.api.nvim_create_augroup('MyCustomNeogitEvents', { clear = true })
 vim.api.nvim_create_autocmd('User', {
   pattern = 'NeogitPushComplete',
@@ -35,7 +34,16 @@ vim.api.nvim_create_autocmd('User', {
   callback = require('neogit').close,
 })
 
+-- AUTO SAVE with Conform
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*",
+--   callback = function(args)
+--     require("conform").format({ bufnr = args.buf })
+--   end,
+-- })
+
 -- SET Theme Tweaks
+-- local C = require("catppuccin.palettes").get_palette("mocha")
 -- vim.cmd [[
 --   highlight CopilotSuggestion guifg=#45475A ctermfg=8
 -- ]]

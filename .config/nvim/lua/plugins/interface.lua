@@ -66,7 +66,7 @@ return {
         },
         b = {
           name = "buffer",
-          o = { "<cmd>Format<cr>", "Format Buffer" },
+          o = { "<cmd>EslintFixAll<cr>", "Format Buffer" },
         },
         g = {
           name = "git",
