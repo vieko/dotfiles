@@ -7,9 +7,6 @@ return {
       "sindrets/diffview.nvim",        -- optional
       "ibhagwan/fzf-lua",              -- optional
     },
-    keys = {
-      { "<leader>gs", "<cmd>Neogit<cr>", desc = "Version Control" },
-    },
     config = true
   },
   {
@@ -44,13 +41,13 @@ return {
   },
   {
     'echasnovski/mini.nvim',
-    lazy = false,
-    event = 'User ActuallyEditing',
+    event = "VeryLazy",
     config = function()
       require('mini.surround').setup { search_method = 'cover_or_nearest' }
       require('mini.comment').setup { options = { ignore_blank_line = true } }
       require('mini.move').setup {}
       require('mini.splitjoin').setup { mappings = { toggle = 'gJ' } }
+      require('mini.pairs').setup {}
     end,
   },
   {
@@ -75,11 +72,6 @@ return {
     "ggandor/flit.nvim",
     opts = { labeled_modes = "nv" },
     event = "VeryLazy",
-  },
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
   },
   {
     'folke/trouble.nvim',

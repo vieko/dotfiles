@@ -15,3 +15,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- prevent capital Q from clobbering the current buffer
 vim.keymap.set("n", "Q", "<nop>")
+
+-- disable recording macros
+-- vim.keymap.set("n", "q", "<nop>")

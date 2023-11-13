@@ -1,3 +1,5 @@
+local C = require("catppuccin.palettes").get_palette("mocha")
+
 -- SET cursor line only in active window
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
   callback = function()
@@ -34,6 +36,6 @@ vim.api.nvim_create_autocmd('User', {
 })
 
 -- SET Theme Tweaks
-vim.cmd [[
-  highlight CopilotSuggestion guifg=#45475A ctermfg=8
-]]
+-- vim.cmd [[
+--   highlight CopilotSuggestion guifg=#45475A ctermfg=8
+-- ]]
