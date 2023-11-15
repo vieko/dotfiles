@@ -45,6 +45,22 @@ local user_plugins = {
       })
     end,
   },
+  {
+    "ggandor/leap.nvim",
+    requires = "tpope/vim-repeat",
+    config = function()
+      require("leap").set_default_keymaps()
+    end,
+  },
+  {
+    "ggandor/flit.nvim",
+    config = function()
+      require("flit").setup({
+        keys = { f = "f", F = "F", t = "t", T = "T" },
+        labeled_modes = "nv",
+      })
+    end,
+  },
   -- EXPLORER
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -173,7 +189,7 @@ local user_plugins = {
     after = "nvim-web-devicons",
     config = function()
       require("vieko.plugins.configs.barbecue")
-    end
+    end,
   },
   -- SECRETS
   {

@@ -63,6 +63,7 @@ catppuccin.setup({
     },
     neotree = false,
     which_key = false,
+    leap = false
   },
 })
 
