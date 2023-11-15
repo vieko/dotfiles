@@ -8,6 +8,7 @@ telescope.setup({
       "%.git",
       "%.next",
       "node_modules/",
+      "undodir/"
     },
     mappings = {
       i = {
@@ -22,7 +23,7 @@ vim.keymap.set("n", "<Leader>s", function()
   telescope_builtin.find_files({ hidden = true })
 end, { desc = "Find Files" })
 
-vim.keymap.set("n", "<Leader>c", function()
+vim.keymap.set("n", "<Leader>n", function()
   telescope_builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "Find Files within Config" })
 

@@ -27,6 +27,7 @@ local user_plugins = {
   "mattn/emmet-vim",
   {
     "kevinhwang91/nvim-bqf",
+    ft = "qf",
     config = function()
       require("vieko.plugins.configs.bqf")
     end,
@@ -153,6 +154,17 @@ local user_plugins = {
     config = function()
       require("vieko.plugins.configs.copilot")
     end,
+  },
+  {
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("vieko.plugins.configs.chatgpt")
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
   },
   -- {
   --   "sourcegraph/sg.nvim",

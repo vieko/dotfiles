@@ -39,10 +39,10 @@ require("bqf").setup({
     tabc = "",
     ptogglemode = "z,",
   },
-  -- filter = {
-  --   fzf = {
-  --     action_for = { ["ctrl-s"] = "split", ["ctrl-t"] = "tab drop" },
-  --     extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
-  --   },
-  -- },
+  filter = {
+    fzf = {
+      action_for = { ["ctrl-s"] = "split", ["ctrl-t"] = "tab drop" },
+      extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
+    },
+  },
 })

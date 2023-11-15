@@ -40,12 +40,7 @@ local function register_fmt_autosave(name, bufnr)
     group = format_group,
     buffer = bufnr,
     callback = function()
-      vim.lsp.buf_request(
-        bufnr,
-        "textDocument/formatting",
-        vim.lsp.util.make_formatting_params({}),
-        fmt_cb(bufnr)
-      )
+      vim.lsp.buf_request(bufnr, "textDocument/formatting", vim.lsp.util.make_formatting_params({}), fmt_cb(bufnr))
     end,
     desc = "Format on Save [LSP]",
   })
@@ -86,12 +81,7 @@ local function on_attach(client, bufnr)
   )
 
   if client.name == "tsserver" then
-    vim.keymap.set(
-      "n",
-      "<Leader>oi",
-      "<Cmd>OrganizeImports<CR>",
-      { desc = "Organize Imports [TS]", buffer = bufnr }
-    )
+    vim.keymap.set("n", "<Leader>oi", "<Cmd>OrganizeImports<CR>", { desc = "Organize Imports [TS]", buffer = bufnr })
   end
 end
 
@@ -118,6 +108,8 @@ require("mason-tool-installer").setup({
     "prettier",
     "stylua",
     "codelldb",
+    "flake8",
+    "autopep8",
   },
 })
 require("mason-lspconfig").setup({
@@ -217,5 +209,9 @@ diagnosticls.setup({
   typescriptreact = web_configs,
   lua = {
     formatter = require("diagnosticls-configs.formatters.stylua"),
+  },
+  python = {
+    linter = require("diagnosticls-configs.linters.flake8"),
+    formatter = require("diagnosticls-configs.formatters.autopep8"),
   },
 })
