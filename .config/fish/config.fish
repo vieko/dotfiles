@@ -4,6 +4,7 @@ set -Ux PAGER most
 set -Ux MANPAGER most
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
+set -Ux TMPDIR /home/vieko/tmp
 
 # DOTFILES
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -29,11 +30,11 @@ alias fa="list_aliases"
 alias sc="source ~/.config/fish/config.fish"
 alias cl="clear"
 alias re="reset"
-alias fefx="pw-metadata -n settings 0 clock.force-quantum 2048"
 
 # EDITOR
 alias vi="nvim"
 alias vim="nvim"
+alias summon="nvim"
 
 # APT
 alias apt="sudo apt-get"
@@ -49,6 +50,7 @@ alias heptabase="nohup ~/AppImages/Heptabase-1.9.0.AppImage >/dev/null 2>&1 diso
 
 # FIXES
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
+alias fefx="pw-metadata -n settings 0 clock.force-quantum 2048"
 
 # GAMES
 alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1 disown"
