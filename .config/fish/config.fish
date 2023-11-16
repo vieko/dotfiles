@@ -34,7 +34,7 @@ alias re="reset"
 # EDITOR
 alias vi="nvim"
 alias vim="nvim"
-alias summon="tmux"
+alias summon="nvim"
 alias demons="nvim"
 
 # APT

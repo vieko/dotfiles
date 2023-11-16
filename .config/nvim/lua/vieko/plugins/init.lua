@@ -62,6 +62,9 @@ local user_plugins = {
       })
     end,
   },
+  {
+    "christoomey/vim-tmux-navigator"
+  },
   -- EXPLORER
   {
     "nvim-neo-tree/neo-tree.nvim",
