@@ -29,3 +29,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
   desc = "Highlight on Yank",
 })
+
+-- Increment and decrement numbers
+local dial_group = vim.api.nvim_create_augroup("DialGroup", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = dial_group,
+  pattern = "typescript",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<C-a>", require("dial.map").inc_normal("typescript"), { noremap = true })
+    vim.api.nvim_buf_set_keymap(0, "n", "<C-x>", require("dial.map").dec_normal("typescript"), { noremap = true })
+  end,
+  desc = "Increment and Decrement Numbers",
+})

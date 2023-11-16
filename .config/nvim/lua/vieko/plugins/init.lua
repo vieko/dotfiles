@@ -47,6 +47,12 @@ local user_plugins = {
     end,
   },
   {
+    "monaqa/dial.nvim",
+    config = function()
+      require("vieko.plugins.configs.dial")
+    end
+  },
+  {
     "ggandor/leap.nvim",
     requires = "tpope/vim-repeat",
     config = function()
