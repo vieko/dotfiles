@@ -34,7 +34,8 @@ alias re="reset"
 # EDITOR
 alias vi="nvim"
 alias vim="nvim"
-alias summon="nvim"
+alias summon="tmux"
+alias demons="nvim"
 
 # APT
 alias apt="sudo apt-get"
