@@ -22,6 +22,7 @@ function M.setup()
   require("vieko.keymaps")
   require("vieko.options")
   require("vieko.plugins")
+  require("vieko.functions")
   require("vieko.colorscheme")
   if vim.g.vscode then
     require("vieko.vscode")

@@ -1,12 +1,13 @@
-local C = require("catppuccin.palettes").get_palette("mocha")
+-- local C = require("catppuccin.palettes").get_palette("mocha")
 
 vim.cmd([[
-    hi BqfPreviewBorder guifg=C.text
-    hi BqfPreviewTitle guifg=C.text
-    hi BqfPreviewThumb guibg=C.text
+    hi BqfPreviewBorder guifg=#cdd6f4
+    hi BqfPreviewTitle guifg=#cdd6f4
+    hi BqfPreviewThumb guibg=#89b4fa
     hi link BqfPreviewRange Search
 ]])
 
+-- TODO: show title with the type of buffer
 require("bqf").setup({
   auto_enable = true,
   auto_resize_height = true, -- highly recommended enable
@@ -15,6 +16,7 @@ require("bqf").setup({
     win_vheight = 12,
     delay_syntax = 80,
     show_title = false,
+    show_scroll_bar = false,
     should_preview_cb = function(bufnr, qwinid)
       local ret = true
       local bufname = vim.api.nvim_buf_get_name(bufnr)
@@ -38,11 +40,5 @@ require("bqf").setup({
     -- set to empty string to disable
     tabc = "",
     ptogglemode = "z,",
-  },
-  filter = {
-    fzf = {
-      action_for = { ["ctrl-s"] = "split", ["ctrl-t"] = "tab drop" },
-      extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
-    },
   },
 })

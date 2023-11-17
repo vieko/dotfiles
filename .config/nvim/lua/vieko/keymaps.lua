@@ -42,3 +42,9 @@ vim.keymap.set("n", "<S-Tab>", "<Cmd>bprevious<CR>", { desc = "Go to previous Bu
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<Return><Esc>", { desc = "Go to NORMAL Mode, Clear any highlights" })
 
 vim.keymap.set("n", "<Leader>z", require("vieko.utils").reload_config, { desc = "Reload Config" })
+
+-- QuickFix
+vim.keymap.set("n", "<Leader>qf", "<Cmd>lua vim.diagnostic.setqflist()<CR>", { desc = "Show Diagnostics in Quickfix" })
+vim.keymap.set("n", "<Leader>qa", "<Cmd>cclose<CR>", { desc = "Close Quickfix" })
+vim.keymap.set("n", "<Leader>qt", "<Cmd>TodoQuickFix<CR>", { desc = "Show TODOs in Quickfix" })
+vim.keymap.set("n", "<Leader>qn", "<Cmd>NoteQuickFix<CR>", { desc = "Show NOTEs in Quickfix" })

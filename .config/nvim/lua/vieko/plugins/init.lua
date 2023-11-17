@@ -50,7 +50,7 @@ local user_plugins = {
     "monaqa/dial.nvim",
     config = function()
       require("vieko.plugins.configs.dial")
-    end
+    end,
   },
   {
     "ggandor/leap.nvim",
@@ -69,7 +69,7 @@ local user_plugins = {
     end,
   },
   {
-    "christoomey/vim-tmux-navigator"
+    "christoomey/vim-tmux-navigator",
   },
   -- EXPLORER
   {
@@ -224,10 +224,12 @@ local user_plugins = {
           {
             file_pattern = {
               ".env*",
+              "*secrets.json",
             },
             cloak_pattern = "=.+",
           },
         },
+        replace = nil,
       })
     end,
   },
