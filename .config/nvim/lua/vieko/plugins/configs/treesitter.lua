@@ -11,6 +11,7 @@ require("nvim-treesitter.configs").setup({
     "tsx",
     "typescript",
     "prisma",
+    "bash",
   },
   highlight = { enable = true },
   context_commentstring = {

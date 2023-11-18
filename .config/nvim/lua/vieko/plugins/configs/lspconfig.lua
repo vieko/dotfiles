@@ -110,7 +110,7 @@ require("mason-tool-installer").setup({
     "codelldb",
     "flake8",
     "autopep8",
-    "black"
+    "black",
   },
 })
 require("mason-lspconfig").setup({
@@ -213,7 +213,6 @@ diagnosticls.setup({
   },
   python = {
     linter = require("diagnosticls-configs.linters.flake8"),
-    -- formatter = require("diagnosticls-configs.formatters.autopep8"),
-    formatter = require 'diagnosticls-configs.formatters.black'
+    formatter = require("diagnosticls-configs.formatters.black"),
   },
 })
