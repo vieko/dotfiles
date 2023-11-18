@@ -46,5 +46,21 @@ vim.keymap.set("n", "<Leader>z", require("vieko.utils").reload_config, { desc = 
 -- QuickFix
 vim.keymap.set("n", "<Leader>qf", "<Cmd>lua vim.diagnostic.setqflist()<CR>", { desc = "Show Diagnostics in Quickfix" })
 vim.keymap.set("n", "<Leader>qa", "<Cmd>cclose<CR>", { desc = "Close Quickfix" })
-vim.keymap.set("n", "<Leader>qt", "<Cmd>TodoQuickFix<CR>", { desc = "Show TODOs in Quickfix" })
-vim.keymap.set("n", "<Leader>qn", "<Cmd>NoteQuickFix<CR>", { desc = "Show NOTEs in Quickfix" })
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>qt",
+  [[:lua Search_and_populate_quickfix('TODO')<CR>]],
+  { noremap = true, silent = true, desc = "Show TODOs in Quickfix" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>qn",
+  [[:lua Search_and_populate_quickfix('NOTE')<CR>]],
+  { noremap = true, silent = true, desc = "Show NOTEs in Quickfix" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>qb",
+  [[:lua Search_and_populate_quickfix('BUG')<CR>]],
+  { noremap = true, silent = true, desc = "Show BUGs in Quickfix" }
+)
