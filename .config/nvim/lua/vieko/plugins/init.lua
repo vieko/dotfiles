@@ -1,6 +1,7 @@
 local user_plugins = {
   -- CORE
   {
+    "dstein64/vim-startuptime",
     "tpope/vim-fugitive",
     config = function()
       vim.keymap.set("n", "<Leader>g", "<Cmd>Git<CR>", { desc = "Git Status" })
