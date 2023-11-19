@@ -132,7 +132,7 @@ ins_left({
   "filename",
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = "bold" },
-  symbols = { unnamed = "", modified = "●", newfile = "", readonly = "" },
+  symbols = { unnamed = "", modified = "●", newfile = "", readonly = "󰌾" },
 })
 
 ins_left({ "location" })
