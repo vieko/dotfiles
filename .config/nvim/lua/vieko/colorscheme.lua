@@ -12,7 +12,7 @@ catppuccin.setup({
   show_end_of_buffer = false,
   term_colors = true,
   dim_inactive = {
-    enabled = false,
+    enabled = true,
     shade = "dark",
     percentage = 0.15,
   },
@@ -47,23 +47,46 @@ catppuccin.setup({
     end,
   },
   integrations = {
-    cmp = true,
-    ufo = true,
-    telescope = { enabled = true },
-    treesitter = true,
     barbecue = {
       dim_dirname = true,
       bold_basename = true,
       dim_context = false,
       alt_background = false,
     },
+    cmp = true,
+    dap = {
+      enabled = true,
+      -- enable_ui = true,
+    },
+    leap = false,
+    mason = false,
+    native_lsp = {
+      enabled = true,
+      virtual_text = {
+        errors = { "italic" },
+        hints = { "italic" },
+        warnings = { "italic" },
+        information = { "italic" },
+      },
+      underlines = {
+        errors = { "underline" },
+        hints = { "underline" },
+        warnings = { "underline" },
+        information = { "underline" },
+      },
+      inlay_hints = {
+        background = true,
+      },
+    },
     navic = {
       enabled = false,
       custom_bg = "NONE",
     },
     neotree = false,
+    telescope = { enabled = true },
+    treesitter = true,
+    ufo = true,
     which_key = false,
-    leap = false,
   },
 })
 
