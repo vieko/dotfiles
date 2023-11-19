@@ -82,10 +82,9 @@ end
 
 ins_left({
   function()
-    -- return "▊"
     return "█"
   end,
-  color = { fg = colors.blue },      -- Sets highlighting of component
+  color = { fg = colors.blue }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
@@ -133,6 +132,7 @@ ins_left({
   "filename",
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = "bold" },
+  symbols = { unnamed = "", modified = "●", newfile = "", readonly = "" },
 })
 
 ins_left({ "location" })
@@ -142,7 +142,7 @@ ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
 ins_left({
   "diagnostics",
   sources = { "nvim_diagnostic" },
-  symbols = { error = " ", warn = " ", info = " " },
+  symbols = { error = " ", warn = " ", info = " ", hint = "󰻂 " },
   diagnostics_color = {
     color_error = { fg = colors.red },
     color_warn = { fg = colors.yellow },
@@ -181,7 +181,7 @@ ins_left({
 
 -- Add components to right sections
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = "bold" },
@@ -203,7 +203,7 @@ ins_right({
 ins_right({
   "diff",
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = " ", modified = " ", removed = " " },
+  symbols = { added = " ", modified = " ", removed = " " },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
