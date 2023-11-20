@@ -1,10 +1,5 @@
 local C = require("catppuccin.palettes").get_palette("mocha")
 
-vim.fn.sign_define("DiagnosticSignError", { text = "X ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = "! ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = "I ", texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "H ", texthl = "DiagnosticSignHint" })
-
 require("neo-tree").setup({
   sources = {
     "filesystem",
@@ -14,9 +9,29 @@ require("neo-tree").setup({
   },
   close_if_last_window = true,
   default_component_configs = {
+    diagnostics = {
+      symbols = {
+        hint = "H",
+        info = "I",
+        warn = "!",
+        error = "X",
+      },
+      highlights = {
+        hint = "DiagnosticSignHint",
+        info = "DiagnosticSignInfo",
+        warn = "DiagnosticSignWarn",
+        error = "DiagnosticSignError",
+      },
+    },
     modified = {
       symbol = "[+]",
       highlight = "NeoTreeModified",
+    },
+    name = {
+      trailing_slash = false,
+      highlight_opened_files = false,
+      use_git_status_colors = false,
+      highlight = "NeoTreeFileName",
     },
     git_status = {
       symbols = {
