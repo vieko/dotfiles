@@ -182,7 +182,7 @@ ins_left({
 
 -- Add components to right sections
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.magenta, gui = "bold" },
@@ -197,7 +197,7 @@ ins_right({
 
 ins_right({
   "branch",
-  icon = "",
+  icon = "*",
   color = { fg = colors.violet, gui = "bold" },
 })
 
