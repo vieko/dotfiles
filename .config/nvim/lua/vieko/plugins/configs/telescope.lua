@@ -7,16 +7,21 @@ telescope.setup({
     file_ignore_patterns = {
       "%.git",
       "%.next",
+      "%.rustup",
+      "%.icons",
+      "%.gnup",
+      "%.cargo",
+      "%.cache",
       "node_modules/",
-      "undodir/"
+      "undodir/",
     },
     mappings = {
       i = {
         ["<C-k>"] = telescope_actions.move_selection_previous,
         ["<C-j>"] = telescope_actions.move_selection_next,
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
 vim.keymap.set("n", "<Leader>s", function()

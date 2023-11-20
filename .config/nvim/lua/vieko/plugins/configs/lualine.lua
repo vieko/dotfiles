@@ -80,46 +80,46 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left({
-  function()
-    return "█"
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-})
+-- ins_left({
+--   function()
+--     return "█"
+--   end,
+--   color = { fg = colors.blue },
+--   padding = { left = 0, right = 1 }
+-- })
 
 ins_left({
   -- mode component
   function()
-    return "⚡"
+    return ""
   end,
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
-      n = colors.red,
+      n = colors.magenta,
       i = colors.green,
       v = colors.blue,
       [""] = colors.blue,
       V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
+      c = colors.red, -- red
+      no = colors.magenta,
       s = colors.orange,
       S = colors.orange,
       [""] = colors.orange,
       ic = colors.yellow,
       R = colors.violet,
       Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
+      cv = colors.magenta,
+      ce = colors.magenta,
       r = colors.cyan,
       rm = colors.cyan,
       ["r?"] = colors.cyan,
-      ["!"] = colors.red,
-      t = colors.red,
+      ["!"] = colors.magenta,
+      t = colors.magenta,
     }
-    return { fg = mode_color[vim.fn.mode()] }
+    return { bg = mode_color[vim.fn.mode()], fg = colors.bg }
   end,
-  padding = { right = 1 },
+  padding = { left = 1, right = 1 },
 })
 
 ins_left({
@@ -176,22 +176,22 @@ ins_left({
     return msg
   end,
   icon = "LSP :",
-  color = { fg = "#ffffff", gui = "bold" },
+  color = { fg = C.text, gui = "bold" },
 })
 
 -- Add components to right sections
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
+  "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = colors.magenta, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = colors.magenta, gui = "bold" },
 })
 
 ins_right({
@@ -203,7 +203,8 @@ ins_right({
 ins_right({
   "diff",
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = " ", modified = " ", removed = " " },
+  -- symbols = { added = " ", modified = " ", removed = " " },
+  symbols = { added = "+", modified = "M", removed = "-" },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
@@ -212,14 +213,13 @@ ins_right({
   cond = conditions.hide_in_width,
 })
 
-ins_right({
-  function()
-    -- return "▊"
-    return "█"
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
-})
+-- ins_right({
+--   function()
+--     return "█"
+--   end,
+--   color = { fg = colors.blue },
+--   padding = { left = 1 },
+-- })
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
