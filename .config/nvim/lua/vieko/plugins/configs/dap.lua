@@ -1,25 +1,25 @@
--- PYTHON
 require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 
 -- PYTHON DAP KEYMAPS
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>dn",
-  "<cmd>lua require('dap-python').test_method()<CR>",
-  { noremap = true, silent = true, desc = "Test Method [DAP Python]" }
-)
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>df",
-  "<cmd>lua require('dap-python').test_class()<CR>",
-  { noremap = true, silent = true, desc = "Test Class [DAP Python]" }
-)
-vim.api.nvim_set_keymap(
-  "v",
-  "<leader>ds",
-  "<ESC><cmd>lua require('dap-python').debug_selection()<CR>",
-  { noremap = true, silent = true, desc = "Debug Selection [DAP Python]" }
-)
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<leader>dn",
+--   "<cmd>lua require('dap-python').test_method()<CR>",
+--   { noremap = true, silent = true, desc = "Test Method [DAP Python]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<leader>df",
+--   "<cmd>lua require('dap-python').test_class()<CR>",
+--   { noremap = true, silent = true, desc = "Test Class [DAP Python]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "v",
+--   "<leader>ds",
+--   "<ESC><cmd>lua require('dap-python').debug_selection()<CR>",
+--   { noremap = true, silent = true, desc = "Debug Selection [DAP Python]" }
+-- )
+
 -- DAP KEYMAPS
 vim.api.nvim_set_keymap(
   "n",
@@ -75,3 +75,33 @@ vim.api.nvim_set_keymap(
   "<cmd>lua require('dap').run_last()<CR>",
   { noremap = true, silent = true, desc = "Run Last [DAP]" }
 )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Leader>dh",
+--   "<cmd>lua require('dap.ui.widgets').hover()<CR>",
+--   { noremap = true, silent = true, desc = "Hover [DAP]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "v",
+--   "<Leader>dh",
+--   "<cmd>lua require('dap.ui.widgets').hover()<CR>",
+--   { noremap = true, silent = true, desc = "Hover [DAP]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Leader>dp",
+--   "<cmd>lua require('dap.ui.widgets').preview()<CR>",
+--   { noremap = true, silent = true, desc = "Preview [DAP]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Leader>df",
+--   ":lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').frames)<CR>",
+--   { noremap = true, silent = true, desc = "Frames [DAP]" }
+-- )
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<Leader>ds",
+--   ":lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').scopes)<CR>",
+--   { noremap = true, silent = true, desc = "Scopes [DAP]" }
+-- )
