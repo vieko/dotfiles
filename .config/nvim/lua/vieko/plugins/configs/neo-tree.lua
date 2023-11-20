@@ -12,6 +12,19 @@ require("neo-tree").setup({
       symbol = "●",
       highlight = "NeoTreeModified",
     },
+    git_status = {
+      symbols = {
+        added = "A",
+        modified = "M",
+        deleted = "D",
+        renamed = "R",
+        untracked = "?",
+        ignored = "!",
+        unstaged = "U",
+        staged = "S",
+        conflict = "C",
+      },
+    },
   },
   filesystem = {
     filtered_items = {

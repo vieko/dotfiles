@@ -5,6 +5,7 @@ SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3
 SETUVAR --export GOOGLE_APPLICATION_CREDENTIALS:/home/vieko/secrets/ltip\x2ddistribution\x2d9571666c0dfc\x2ejson
 SETUVAR --export MANPAGER:most
 SETUVAR --export PAGER:most
+SETUVAR --export PYENV_ROOT:/home/vieko/\x2epyenv
 SETUVAR --export TMPDIR:/home/vieko/tmp
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3400
@@ -55,4 +56,4 @@ SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR --export fish_tmux_autostart:false
 SETUVAR --export fish_tmux_config:/home/vieko/\x2econfig/tmux/tmux\x2econf
-SETUVAR fish_user_paths:/snap/bin\x1e/usr/local/go/bin\x1e/home/vieko/\x2elocal/bin\x1e/home/vieko/\x2efzf/bin
+SETUVAR fish_user_paths:/home/vieko/\x2epyenv/bin\x1e/snap/bin\x1e/usr/local/go/bin\x1e/home/vieko/\x2elocal/bin\x1e/home/vieko/\x2efzf/bin

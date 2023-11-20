@@ -122,6 +122,8 @@ local user_plugins = {
       { "jayp0521/mason-nvim-dap.nvim" },
       -- LUA SPECIFIC
       { "folke/neodev.nvim" },
+      -- PYTHON SPECIFIC
+      { "mfussenegger/nvim-dap-python" },
     },
     config = function()
       require("mason").setup()
