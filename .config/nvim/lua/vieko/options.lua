@@ -46,7 +46,7 @@ vim.opt.showmode = true -- false
 vim.opt.showtabline = 0
 vim.opt.shortmess:append("c")
 vim.opt.sidescrolloff = 8
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:2"
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
