@@ -132,7 +132,7 @@ ins_left({
   "filename",
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = "bold" },
-  symbols = { unnamed = "", modified = "●", newfile = "", readonly = "󰌾" },
+  symbols = { unnamed = "?", modified = "[+]", newfile = "*", readonly = "󰌾" },
 })
 
 ins_left({ "location" })
@@ -142,7 +142,7 @@ ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
 ins_left({
   "diagnostics",
   sources = { "nvim_diagnostic" },
-  symbols = { error = " ", warn = " ", info = " ", hint = "󰻂 " },
+  symbols = { error = " ", warn = " ", info = " ", hint = "󰗠 " },
   diagnostics_color = {
     color_error = { fg = colors.red },
     color_warn = { fg = colors.yellow },
@@ -181,7 +181,7 @@ ins_left({
 
 -- Add components to right sections
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.magenta, gui = "bold" },

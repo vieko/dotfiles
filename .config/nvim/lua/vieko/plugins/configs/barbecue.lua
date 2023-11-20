@@ -6,6 +6,6 @@ require("barbecue").setup({
   theme = "catppuccin",
   show_navic = true,
   show_dirname = false,
-  show_modified = true,
+  show_modified = false,
   context_follow_icon_color = true,
 })

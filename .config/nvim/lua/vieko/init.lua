@@ -10,6 +10,19 @@ local function init()
   vim.g["test#strategy"] = "neovim"
   vim.g["test#neovim#term_position"] = "vertical"
   vim.g["test#javascript#jest#options"] = "--watch"
+
+  vim.g.clipboard = {
+    name = 'xclip',
+    copy = {
+      ["+"] = 'xclip -selection clipboard',
+      ["*"] = 'xclip -selection clipboard',
+    },
+    paste = {
+      ["+"] = 'xclip -selection clipboard -o',
+      ["*"] = 'xclip -selection clipboard -o',
+    },
+    cache_enabled = 0,
+  }
 end
 
 local function debug()

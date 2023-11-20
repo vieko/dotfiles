@@ -173,17 +173,17 @@ local user_plugins = {
       require("vieko.plugins.configs.copilot")
     end,
   },
-  {
-    "jackMort/ChatGPT.nvim",
-    config = function()
-      require("vieko.plugins.configs.chatgpt")
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   config = function()
+  --     require("vieko.plugins.configs.chatgpt")
+  --   end,
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  -- },
   -- {
   --   "sourcegraph/sg.nvim",
   --   run = "cargo build --workspace",
