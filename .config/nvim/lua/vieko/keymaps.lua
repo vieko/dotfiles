@@ -37,8 +37,8 @@ vim.keymap.set("n", "<Leader>r", ":%s/<C-r><C-w>/", { desc = "Replace Word" })
 vim.keymap.set("n", "<Leader>w", "<Cmd>write<CR>", { desc = "Save current File" })
 
 vim.keymap.set("n", "<C-c>", "<Cmd>bp|bd #<CR>", { desc = "Close Buffer, except the last one" })
-vim.keymap.set("n", "<Tab>", "<Cmd>bnext<CR>", { desc = "Go to next Buffer" })
-vim.keymap.set("n", "<S-Tab>", "<Cmd>bprevious<CR>", { desc = "Go to previous Buffer" })
+vim.keymap.set("n", "<Tab>", ":lua BufferNavigation('next')<CR>", { desc = "Go to next Buffer" })
+vim.keymap.set("n", "<S-Tab>", ":lua BufferNavigation('prev')<CR>", { desc = "Go to previous Buffer" })
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<Return><Esc>", { desc = "Go to NORMAL Mode, Clear any highlights" })
 
 vim.keymap.set("n", "<Leader>z", require("vieko.utils").reload_config, { desc = "Reload Config" })

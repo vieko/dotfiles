@@ -109,8 +109,8 @@ require("mason-tool-installer").setup({
     "stylua",
     "codelldb",
     "flake8",
-    "autopep8",
     "black",
+    "autopep8",
   },
 })
 require("mason-lspconfig").setup({

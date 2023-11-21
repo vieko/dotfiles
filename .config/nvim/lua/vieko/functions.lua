@@ -1,4 +1,3 @@
--- Define a function to search for an exact keyword in the buffer and handle results
 function Search_and_populate_quickfix(keyword)
   -- Check if the quickfix window is already open
   if vim.fn.getwinvar(0, "&filetype") == "qf" then
@@ -45,4 +44,45 @@ function Search_and_populate_quickfix(keyword)
     -- Print a message if there are no results
     print("No results found for: " .. keyword)
   end
+end
+
+function BufferNavigation(direction)
+  local skip_buffer_types = { "nofile", "help", "terminal", "quickfix" }
+
+  local function should_skip(buf)
+    local buftype = vim.api.nvim_buf_get_option(buf, "buftype")
+    for _, skip_buftype in ipairs(skip_buffer_types) do
+      if buftype == skip_buftype then
+        return true
+      end
+    end
+    return false
+  end
+
+  local current_buf = vim.api.nvim_get_current_buf()
+  if should_skip(current_buf) then
+    local current_buf_type = vim.api.nvim_buf_get_option(current_buf, "buftype")
+    print("(" .. current_buf_type .. ") is in the skip list.")
+    return
+  end
+
+  local buf_list = vim.api.nvim_list_bufs()
+  local num_bufs = #buf_list
+  local index = vim.fn.bufnr("%") -- Current buffer number
+  local step = direction == "next" and 1 or -1
+  local checked_buffers = 0
+
+  while checked_buffers < num_bufs do
+    index = (index + step - 1) % num_bufs + 1
+    local buf = buf_list[index]
+
+    if buf ~= current_buf and vim.api.nvim_buf_is_loaded(buf) and not should_skip(buf) then
+      vim.api.nvim_set_current_buf(buf)
+      return
+    end
+
+    checked_buffers = checked_buffers + 1
+  end
+
+  print("No suitable buffer found.")
 end
