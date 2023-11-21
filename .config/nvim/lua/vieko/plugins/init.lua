@@ -190,13 +190,13 @@ local user_plugins = {
   --   dependencies = { "nvim-lua/plenary.nvim" },
   -- },
   -- FOLDS
-  {
-    "kevinhwang91/nvim-ufo",
-    requires = { "kevinhwang91/promise-async" },
-    config = function()
-      require("vieko.plugins.configs.ufo")
-    end,
-  },
+  -- {
+  --   "kevinhwang91/nvim-ufo",
+  --   requires = { "kevinhwang91/promise-async" },
+  --   config = function()
+  --     require("vieko.plugins.configs.ufo")
+  --   end,
+  -- },
   -- THEME
   { "catppuccin/nvim", as = "catppuccin" },
   -- SYNTAX
@@ -219,6 +219,13 @@ local user_plugins = {
     after = "nvim-web-devicons",
     config = function()
       require("vieko.plugins.configs.barbecue")
+    end,
+  },
+  -- TERMINAL
+  {
+    "akinsho/nvim-toggleterm.lua",
+    config = function()
+      require("vieko.plugins.configs.toggleterm")
     end,
   },
   -- SECRETS
