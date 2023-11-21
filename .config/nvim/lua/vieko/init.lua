@@ -12,17 +12,20 @@ local function init()
   vim.g["test#javascript#jest#options"] = "--watch"
 
   vim.g.clipboard = {
-    name = 'xclip',
+    name = "xclip",
     copy = {
-      ["+"] = 'xclip -selection clipboard',
-      ["*"] = 'xclip -selection clipboard',
+      ["+"] = "xclip -selection clipboard",
+      ["*"] = "xclip -selection clipboard",
     },
     paste = {
-      ["+"] = 'xclip -selection clipboard -o',
-      ["*"] = 'xclip -selection clipboard -o',
+      ["+"] = "xclip -selection clipboard -o",
+      ["*"] = "xclip -selection clipboard -o",
     },
     cache_enabled = 0,
   }
+
+  -- vim.g.tmux_navigator_no_wrap = 1
+  -- vim.g.tmux_navigator_save_on_switch = 2
 end
 
 local function debug()
