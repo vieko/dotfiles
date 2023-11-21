@@ -20,8 +20,8 @@ catppuccin.setup({
   no_bold = false,
   no_underline = false,
   styles = {
-    comments = { "italic" },
-    conditionals = { "italic" },
+    comments = {},
+    conditionals = {},
     loops = {},
     functions = {},
     keywords = {},
@@ -56,7 +56,7 @@ catppuccin.setup({
     cmp = true,
     dap = {
       enabled = true,
-      -- enable_ui = true,
+      enable_ui = true,
     },
     leap = false,
     mason = false,
