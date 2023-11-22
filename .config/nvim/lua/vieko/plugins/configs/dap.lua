@@ -1,4 +1,22 @@
+local dap = require("dap")
+dap.defaults.fallback.terminal_win_cmd = "50vsplit new"
+dap.defaults.fallback.focus_terminal = false
+
 require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+
+function close_dap_terminal(target_name, target_type)
+  local buffers = vim.api.nvim_list_bufs()
+  for _, buf in ipairs(buffers) do
+    local name = vim.api.nvim_buf_get_name(buf)
+    local type = vim.api.nvim_buf_get_option(buf, "buftype")
+
+    if (name == target_name) or (type == target_type) then
+      -- Close the buffer
+      -- Use ':bd!' to force close the buffer
+      vim.api.nvim_command("bd! " .. buf)
+    end
+  end
+end
 
 -- PYTHON DAP KEYMAPS
 -- vim.api.nvim_set_keymap(
@@ -66,14 +84,20 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>dr",
-  "<cmd>lua require('dap').repl.open()<CR>",
-  { noremap = true, silent = true, desc = "Open REPL [DAP]" }
+  "<cmd>lua require('dap').repl.toggle()<CR>",
+  { noremap = true, silent = true, desc = "Toggle REPL [DAP]" }
 )
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>dl",
   "<cmd>lua require('dap').run_last()<CR>",
   { noremap = true, silent = true, desc = "Run Last [DAP]" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>dc",
+  ':lua close_dap_terminal("[dap terminal] Launch file", "terminal")<CR>',
+  { noremap = true, silent = true, desc = "Close Terminal [DAP]" }
 )
 -- vim.api.nvim_set_keymap(
 --   "n",
