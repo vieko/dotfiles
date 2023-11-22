@@ -126,6 +126,7 @@ ins_left({
   -- filesize component
   "filesize",
   cond = conditions.buffer_not_empty,
+  color = { fg = colors.violet, gui = "bold" },
 })
 
 ins_left({
@@ -135,9 +136,12 @@ ins_left({
   symbols = { unnamed = "?", modified = "[+]", newfile = "*", readonly = "[READONLY]" },
 })
 
-ins_left({ "location" })
+ins_left({
+  "location",
+  color = { fg = colors.violet, gui = "bold" },
+})
 
-ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+ins_left({ "progress", color = { fg = colors.violet, gui = "bold" } })
 
 ins_left({
   "diagnostics",
@@ -177,12 +181,12 @@ ins_left({
     return msg
   end,
   icon = "LSP :",
-  color = { fg = C.text, gui = "bold" },
+  color = { fg = colors.violet, gui = "bold" },
 })
 
 -- Add components to right sections
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
+  "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.magenta, gui = "bold" },
