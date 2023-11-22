@@ -1,13 +1,13 @@
 local user_plugins = {
   -- CORE
-  {
-    "dstein64/vim-startuptime",
-    "tpope/vim-fugitive",
-    config = function()
-      vim.keymap.set("n", "<Leader>g", "<Cmd>Git<CR>", { desc = "Git Status" })
-    end,
-  },
-  "tpope/vim-surround",
+  { "dstein64/vim-startuptime" },
+  -- {
+  --   "tpope/vim-fugitive",
+  --   config = function()
+  --     vim.keymap.set("n", "<Leader>g", "<Cmd>Git<CR>", { desc = "Git Status" })
+  --   end,
+  -- },
+  { "tpope/vim-surround" },
   {
     "numToStr/Comment.nvim",
     config = function()
@@ -16,16 +16,16 @@ local user_plugins = {
       })
     end,
   },
-  "tpope/vim-repeat",
-  "tpope/vim-rhubarb",
-  "janko/vim-test",
+  { "tpope/vim-repeat" },
+  -- { "tpope/vim-rhubarb" },
+  { "janko/vim-test" },
   {
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({})
     end,
   },
-  "mattn/emmet-vim",
+  { "mattn/emmet-vim" },
   {
     "kevinhwang91/nvim-bqf",
     ft = "qf",
@@ -198,9 +198,12 @@ local user_plugins = {
   --   end,
   -- },
   -- THEME
-  { "catppuccin/nvim", as = "catppuccin" },
+  {
+    "catppuccin/nvim",
+    as = "catppuccin",
+  },
   -- SYNTAX
-  "princejoogie/tailwind-highlight.nvim",
+  { "princejoogie/tailwind-highlight.nvim" },
   -- STATUSLINE
   {
     "nvim-lualine/lualine.nvim",
@@ -229,26 +232,26 @@ local user_plugins = {
     end,
   },
   -- SECRETS
-  {
-    "laytan/cloak.nvim",
-    config = function()
-      require("cloak").setup({
-        enabled = true,
-        cloak_character = "*",
-        highlight_group = "Comment",
-        patterns = {
-          {
-            file_pattern = {
-              ".env*",
-              "*secrets.json",
-            },
-            cloak_pattern = "=.+",
-          },
-        },
-        replace = nil,
-      })
-    end,
-  },
+  -- {
+  --   "laytan/cloak.nvim",
+  --   config = function()
+  --     require("cloak").setup({
+  --       enabled = true,
+  --       cloak_character = "*",
+  --       highlight_group = "Comment",
+  --       patterns = {
+  --         {
+  --           file_pattern = {
+  --             ".env*",
+  --             "*secrets.json",
+  --           },
+  --           cloak_pattern = "=.+",
+  --         },
+  --       },
+  --       replace = nil,
+  --     })
+  --   end,
+  -- },
 }
 
 -- SET UP Plugins

@@ -47,7 +47,7 @@ function Search_and_populate_quickfix(keyword)
 end
 
 function BufferNavigation(direction)
-  local skip_buffer_types = { "nofile", "help", "terminal", "quickfix" }
+  local skip_buffer_types = { "nofile", "help", "terminal", "quickfix", "qf" }
 
   local function should_skip(buf)
     local buftype = vim.api.nvim_buf_get_option(buf, "buftype")

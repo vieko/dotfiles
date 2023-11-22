@@ -41,3 +41,23 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   desc = "Increment and Decrement Numbers",
 })
+
+local function enable_cursorline()
+  vim.wo.cursorline = true
+end
+
+local function disable_cursorline()
+  vim.wo.cursorline = false
+end
+
+-- Autocommand to enable cursorline in the current window
+vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter", "InsertLeave", "FocusGained" }, {
+  pattern = "*",
+  callback = enable_cursorline,
+})
+
+-- Autocommand to disable cursorline in the inactive window
+vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave", "InsertEnter", "FocusLost" }, {
+  pattern = "*",
+  callback = disable_cursorline,
+})
