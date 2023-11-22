@@ -9,10 +9,7 @@ function close_dap_terminal(target_name, target_type)
   for _, buf in ipairs(buffers) do
     local name = vim.api.nvim_buf_get_name(buf)
     local type = vim.api.nvim_buf_get_option(buf, "buftype")
-
     if (name == target_name) or (type == target_type) then
-      -- Close the buffer
-      -- Use ':bd!' to force close the buffer
       vim.api.nvim_command("bd! " .. buf)
     end
   end

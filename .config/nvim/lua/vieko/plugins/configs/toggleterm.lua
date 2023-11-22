@@ -10,7 +10,7 @@ require("toggleterm").setup({
   end,
   hide_numbers = true,
   shade_terminals = false,
-  start_in_insert = false,
+  start_in_insert = true,
   persist_size = true,
 })
 
