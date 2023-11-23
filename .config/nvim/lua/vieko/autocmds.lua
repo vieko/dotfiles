@@ -1,15 +1,17 @@
 local C = require("catppuccin.palettes").get_palette("mocha")
+local L = require("catppuccin.palettes").get_palette("latte")
 
 -- Transparent highlights
 local function transparent_cb()
   vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = C.yellow, bold = true })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = L.yellow, bold = true })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE", fg = C.text })
   vim.api.nvim_set_hl(0, "ErrorFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "WarningFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "InfoFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "HintFloat", { bg = "NONE" })
+  vim.api.nvim_set_hl(0, "IncSearch", { bg = L.yellow, fg = C.crust })
 end
 
 local transparent_group = vim.api.nvim_create_augroup("TransparentGroup", { clear = true })
