@@ -1,3 +1,4 @@
 ## TODO
 - [ ] HANDLE VSCode with Packer's `cond = [[not vim.g.vscode]]`
-- [ ] TRY + CONFIG ToggleTerm
+- [ ] FORK + TWEAK Catppuccin
+  - [ ] `TMUX` current pane should be editable

@@ -1,17 +1,19 @@
 local C = require("catppuccin.palettes").get_palette("mocha")
-local L = require("catppuccin.palettes").get_palette("latte")
+local U = {
+  pink = "#F859A8"
+}
 
 -- Transparent highlights
 local function transparent_cb()
   vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = L.yellow, bold = true })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = U.pink, bold = true })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE", fg = C.text })
   vim.api.nvim_set_hl(0, "ErrorFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "WarningFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "InfoFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "HintFloat", { bg = "NONE" })
-  vim.api.nvim_set_hl(0, "IncSearch", { bg = L.yellow, fg = C.crust })
+  vim.api.nvim_set_hl(0, "IncSearch", { bg = U.pink, fg = C.crust })
 end
 
 local transparent_group = vim.api.nvim_create_augroup("TransparentGroup", { clear = true })
@@ -27,7 +29,7 @@ local yank_group = vim.api.nvim_create_augroup("YankGroup", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = yank_group,
   callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 100 })
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
   end,
   desc = "Highlight on Yank",
 })
