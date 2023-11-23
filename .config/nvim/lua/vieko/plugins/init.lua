@@ -72,12 +72,6 @@ local user_plugins = {
   {
     "christoomey/vim-tmux-navigator",
   },
-  {
-    "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("vieko.plugins.configs.devicons")
-    end,
-  },
   -- EXPLORER
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -229,6 +223,12 @@ local user_plugins = {
     "akinsho/nvim-toggleterm.lua",
     config = function()
       require("vieko.plugins.configs.toggleterm")
+    end,
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("vieko.plugins.configs.devicons")
     end,
   },
   -- SECRETS
