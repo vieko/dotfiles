@@ -46,6 +46,7 @@ function Search_and_populate_quickfix(keyword)
   end
 end
 
+-- Function to navigate between buffers
 function BufferNavigation(direction)
   local skip_buffer_types = { "nofile", "help", "terminal", "quickfix", "qf" }
 
@@ -68,13 +69,19 @@ function BufferNavigation(direction)
 
   local buf_list = vim.api.nvim_list_bufs()
   local num_bufs = #buf_list
-  local index = vim.fn.bufnr("%") -- Current buffer number
+  local current_index = vim.fn.index(buf_list, current_buf) + 1
   local step = direction == "next" and 1 or -1
   local checked_buffers = 0
 
   while checked_buffers < num_bufs do
-    index = (index + step - 1) % num_bufs + 1
-    local buf = buf_list[index]
+    current_index = current_index + step
+    if current_index > num_bufs then
+      current_index = 1
+    elseif current_index < 1 then
+      current_index = num_bufs
+    end
+
+    local buf = buf_list[current_index]
 
     if buf ~= current_buf and vim.api.nvim_buf_is_loaded(buf) and not should_skip(buf) then
       vim.api.nvim_set_current_buf(buf)
@@ -85,4 +92,22 @@ function BufferNavigation(direction)
   end
 
   print("No suitable buffer found.")
+end
+
+-- Function to cycle through window layouts
+function Cycle_window_layouts()
+  -- Define a sequence of commands to cycle layouts
+  local commands = { "wincmd H", "wincmd J", "wincmd K", "wincmd L", "wincmd =" }
+  -- Store the current layout state
+  local current_layout = vim.g.current_layout_cycle or 1
+
+  -- Execute the command for the current layout
+  vim.api.nvim_command(commands[current_layout])
+
+  -- Update the layout state
+  current_layout = current_layout + 1
+  if current_layout > #commands then
+    current_layout = 1
+  end
+  vim.g.current_layout_cycle = current_layout
 end

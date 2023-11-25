@@ -26,9 +26,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- prevent capital Q from clobbering the current buffer
 vim.keymap.set("n", "Q", "<nop>")
 
+-- close buffers
 vim.keymap.set("n", "<Leader>x", "<Cmd>bd<CR>", { desc = "Close current Buffer" })
 vim.keymap.set("n", "<Leader>xx", "<Cmd>%bd<CR>", { desc = "Close all Buffer" })
 vim.keymap.set("n", "<Leader>xo", "<Cmd>%bd<Bar>e#<Bar>bd#<CR>", { desc = "Close all Buffer but current" })
+vim.keymap.set("n", "<C-c>", "<Cmd>bp|bd #<CR>", { desc = "Close Buffer, except the last one" })
+
+-- move between windows
 vim.keymap.set("n", "<Leader>j", "<C-w><C-j>", { desc = "Move cursor bottom window" })
 vim.keymap.set("n", "<Leader>k", "<C-w><C-k>", { desc = "Move cursor top window" })
 vim.keymap.set("n", "<Leader>l", "<C-w><C-l>", { desc = "Move cursor left window" })
@@ -36,11 +40,14 @@ vim.keymap.set("n", "<Leader>h", "<C-w><C-h>", { desc = "Move cursor right windo
 vim.keymap.set("n", "<Leader>r", ":%s/<C-r><C-w>/", { desc = "Replace Word" })
 vim.keymap.set("n", "<Leader>w", "<Cmd>write<CR>", { desc = "Save current File" })
 
-vim.keymap.set("n", "<C-c>", "<Cmd>bp|bd #<CR>", { desc = "Close Buffer, except the last one" })
+-- move between buffers
 vim.keymap.set("n", "<Tab>", ":lua BufferNavigation('next')<CR>", { desc = "Go to next Buffer" })
 vim.keymap.set("n", "<S-Tab>", ":lua BufferNavigation('prev')<CR>", { desc = "Go to previous Buffer" })
+
+-- clear highlights
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<Return><Esc>", { desc = "Go to NORMAL Mode, Clear any highlights" })
 
+-- reload config
 vim.keymap.set("n", "<Leader>z", require("vieko.utils").reload_config, { desc = "Reload Config" })
 
 -- QuickFix
@@ -64,24 +71,6 @@ vim.api.nvim_set_keymap(
   [[:lua Search_and_populate_quickfix('BUG')<CR>]],
   { noremap = true, silent = true, desc = "Show BUGs in Quickfix" }
 )
-
--- Function to cycle through window layouts
-function Cycle_window_layouts()
-  -- Define a sequence of commands to cycle layouts
-  local commands = { "wincmd H", "wincmd J", "wincmd K", "wincmd L", "wincmd =" }
-  -- Store the current layout state
-  local current_layout = vim.g.current_layout_cycle or 1
-
-  -- Execute the command for the current layout
-  vim.api.nvim_command(commands[current_layout])
-
-  -- Update the layout state
-  current_layout = current_layout + 1
-  if current_layout > #commands then
-    current_layout = 1
-  end
-  vim.g.current_layout_cycle = current_layout
-end
 
 -- Set a keymap to call this function, e.g., mapping to <Leader>rl
 vim.api.nvim_set_keymap(
