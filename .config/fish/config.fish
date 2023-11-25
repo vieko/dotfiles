@@ -58,3 +58,5 @@ alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1
 
 # PYTHON
 pyenv init - | source
+alias py="python3"
+alias snake="python3"
