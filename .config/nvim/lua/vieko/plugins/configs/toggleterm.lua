@@ -27,6 +27,14 @@ end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
-vim.keymap.set("n", "<Leader>tv", "<Cmd>ToggleTerm direction=vertical<CR>", { desc = "Toggle Terminal Vertical" })
+local function open_toggleterm(direction)
+  local buf_dir = vim.fn.expand("%:p:h")
+  vim.cmd("ToggleTerm direction=" .. direction .. " dir='" .. buf_dir .. "'")
+end
 
-vim.keymap.set("n", "<Leader>th", "<Cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle Terminal Horizontal" })
+vim.keymap.set("n", "<Leader>tv", function()
+  open_toggleterm("vertical")
+end, { desc = "Toggle Terminal Vertical" })
+vim.keymap.set("n", "<Leader>th", function()
+  open_toggleterm("horizontal")
+end, { desc = "Toggle Terminal Horizontal" })

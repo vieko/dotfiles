@@ -64,3 +64,29 @@ vim.api.nvim_set_keymap(
   [[:lua Search_and_populate_quickfix('BUG')<CR>]],
   { noremap = true, silent = true, desc = "Show BUGs in Quickfix" }
 )
+
+-- Function to cycle through window layouts
+function Cycle_window_layouts()
+  -- Define a sequence of commands to cycle layouts
+  local commands = { "wincmd H", "wincmd J", "wincmd K", "wincmd L", "wincmd =" }
+  -- Store the current layout state
+  local current_layout = vim.g.current_layout_cycle or 1
+
+  -- Execute the command for the current layout
+  vim.api.nvim_command(commands[current_layout])
+
+  -- Update the layout state
+  current_layout = current_layout + 1
+  if current_layout > #commands then
+    current_layout = 1
+  end
+  vim.g.current_layout_cycle = current_layout
+end
+
+-- Set a keymap to call this function, e.g., mapping to <Leader>rl
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-w>r",
+  ":lua Cycle_window_layouts()<CR>",
+  { noremap = true, silent = true, desc = "Cycle Window Layouts" }
+)
