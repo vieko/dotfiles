@@ -4,7 +4,7 @@ dap.defaults.fallback.focus_terminal = false
 
 require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 
-function close_dap_terminal(target_name, target_type)
+local function close_dap_terminal(target_name, target_type)
   local buffers = vim.api.nvim_list_bufs()
   for _, buf in ipairs(buffers) do
     local name = vim.api.nvim_buf_get_name(buf)

@@ -27,10 +27,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- close buffers
-vim.keymap.set("n", "<Leader>x", "<Cmd>bd<CR>", { desc = "Close current Buffer" })
-vim.keymap.set("n", "<Leader>xx", "<Cmd>%bd<CR>", { desc = "Close all Buffer" })
-vim.keymap.set("n", "<Leader>xo", "<Cmd>%bd<Bar>e#<Bar>bd#<CR>", { desc = "Close all Buffer but current" })
-vim.keymap.set("n", "<C-c>", "<Cmd>bp|bd #<CR>", { desc = "Close Buffer, except the last one" })
+vim.keymap.set("n", "<Leader>x", function()
+  vim.cmd("bd")
+end, { desc = "Close current Buffer" })
+vim.keymap.set("n", "<Leader>xx", function()
+  vim.cmd("%bd")
+end, { desc = "Close all Buffer" })
+vim.keymap.set("n", "<Leader>xo", function()
+  vim.cmd("%bd|e#|bd#")
+end, { desc = "Close all Buffer but current" })
+vim.keymap.set("n", "<C-c>", function()
+  vim.cmd("bp|bd #")
+end, { desc = "Close Buffer, except the last one" })
 
 -- move between windows
 vim.keymap.set("n", "<Leader>j", "<C-w><C-j>", { desc = "Move cursor bottom window" })
