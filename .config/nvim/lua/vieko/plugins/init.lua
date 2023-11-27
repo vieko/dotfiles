@@ -197,7 +197,21 @@ local user_plugins = {
     as = "catppuccin",
   },
   -- SYNTAX
-  { "princejoogie/tailwind-highlight.nvim" },
+  -- { "princejoogie/tailwind-highlight.nvim" },
+  -- {
+  --   "roobert/tailwindcss-colorizer-cmp.nvim",
+  --   config = function()
+  --     require("tailwindcss-colorizer-cmp").setup({
+  --       color_square_width = 2,
+  --     })
+  --   end,
+  -- },
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   config = function()
+  --     require("vieko.plugins.configs.colorizer")
+  --   end,
+  -- },
   -- STATUSLINE
   {
     "nvim-lualine/lualine.nvim",

@@ -134,26 +134,37 @@ require("mason-lspconfig").setup({
 -- lANGUAGE SERVERS
 lspconfig.pylsp.setup(default_config)
 lspconfig.bashls.setup(default_config)
-lspconfig.cssls.setup(default_config)
 lspconfig.dockerls.setup(default_config)
 lspconfig.html.setup(default_config)
 lspconfig.jsonls.setup(default_config)
 lspconfig.yamlls.setup(default_config)
 lspconfig.gopls.setup(default_config)
+lspconfig.tailwindcss.setup(default_config)
+lspconfig.cssls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    css = {
+      validate = true,
+      lint = {
+        unknownAtRules = "ignore",
+      },
+    },
+  },
+})
 
 -- TAILWIND CSS
-local tw_highlight = require("tailwind-highlight")
-lspconfig.tailwindcss.setup({
-  on_attach = function(client, bufnr)
-    tw_highlight.setup(client, bufnr, {
-      single_column = false,
-      mode = "background",
-      debounce = 200,
-    })
-
-    on_attach(client, bufnr)
-  end,
-})
+-- local tw_highlight = require("tailwind-highlight")
+-- lspconfig.tailwindcss.setup({
+--   on_attach = function(client, bufnr)
+--     tw_highlight.setup(client, bufnr, {
+--       single_column = false,
+--       mode = "background",
+--       debounce = 200,
+--     })
+--     on_attach(client, bufnr)
+--   end,
+-- })
 
 -- TYPESCRIPT / JAVASCRIPT
 local function organize_imports()
