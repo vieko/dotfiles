@@ -4,7 +4,7 @@ dap.defaults.fallback.focus_terminal = false
 
 require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 
-local function close_dap_terminal(target_name, target_type)
+function Close_dap_terminal(target_name, target_type)
   local buffers = vim.api.nvim_list_bufs()
   for _, buf in ipairs(buffers) do
     local name = vim.api.nvim_buf_get_name(buf)
@@ -93,7 +93,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>dc",
-  ':lua close_dap_terminal("[dap terminal] Launch file", "terminal")<CR>',
+  ':lua Close_dap_terminal("[dap terminal] Launch file", "terminal")<CR>',
   { noremap = true, silent = true, desc = "Close Terminal [DAP]" }
 )
 -- vim.api.nvim_set_keymap(
