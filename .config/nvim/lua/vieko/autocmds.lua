@@ -1,7 +1,16 @@
 local C = require("catppuccin.palettes").get_palette("mocha")
 local U = {
-  pink = "#F859A8"
+  pink = "#F859A8",
 }
+
+-- refresh buffers when files change on disk
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_command("checktime")
+  end,
+  desc = "Refresh buffers when files change on disk",
+})
 
 -- Transparent highlights
 local function transparent_cb()
