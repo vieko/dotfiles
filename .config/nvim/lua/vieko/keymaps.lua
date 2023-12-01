@@ -87,3 +87,6 @@ vim.api.nvim_set_keymap(
   ":lua Cycle_window_layouts()<CR>",
   { noremap = true, silent = true, desc = "Cycle Window Layouts" }
 )
+
+-- trigger emmet with <C-k>
+vim.api.nvim_set_keymap("i", "<C-k>", "<Plug>(emmet-expand-abbr)", { noremap = false })

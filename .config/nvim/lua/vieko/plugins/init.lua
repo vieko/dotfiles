@@ -80,6 +80,13 @@ local user_plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
+      {
+        "3rd/image.nvim",
+        config = function()
+          require("image").setup()
+        end,
+        rocks = { "magick" },
+      },
     },
     config = function()
       require("vieko.plugins.configs.neo-tree")
