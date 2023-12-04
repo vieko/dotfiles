@@ -12,6 +12,8 @@ require("nvim-treesitter.configs").setup({
     "typescript",
     "prisma",
     "bash",
+    "yaml",
+    "sql",
   },
   highlight = { enable = true },
 })

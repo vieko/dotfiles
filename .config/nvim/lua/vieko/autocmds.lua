@@ -74,3 +74,9 @@ vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave", "InsertEnter", "FocusLost"
   pattern = "*",
   callback = disable_cursorline,
 })
+
+-- set .env, .env.example, .env.local, .env.development.local, .env.test.local, .env.production.local to yaml filetype
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.env", "*.env.local" },
+  command = "setfiletype dotenv",
+})
