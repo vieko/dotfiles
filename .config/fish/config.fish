@@ -52,6 +52,7 @@ alias heptabase="nohup ~/AppImages/Heptabase-1.9.0.AppImage >/dev/null 2>&1 diso
 # FIXES
 alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
 alias fefx="pw-metadata -n settings 0 clock.force-quantum 2048"
+alias toggledns="~/.config/functions/toggle-dns.sh"
 
 # GAMES
 alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1 disown"
