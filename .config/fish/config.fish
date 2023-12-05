@@ -30,6 +30,7 @@ alias fa="list_aliases"
 alias sc="source ~/.config/fish/config.fish"
 alias cl="clear"
 alias re="reset"
+alias pn="pnpm"
 
 # EDITOR
 alias vi="nvim"
@@ -61,3 +62,9 @@ alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1
 pyenv init - | source
 alias py="python3"
 alias snake="python3"
+
+# PNPM
+set -gx PNPM_HOME "/home/vieko/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
