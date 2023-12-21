@@ -84,8 +84,10 @@ local user_plugins = {
         "3rd/image.nvim",
         config = function()
           require("image").setup()
+          package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
+          package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
         end,
-        rocks = { "magick" },
+        -- rocks = { "magick" },
       },
     },
     config = function()

@@ -23,7 +23,6 @@ alias fd="fdfind"
 alias rm="trash"
 alias st="fast"
 alias bat="batcat"
-alias python="python3"
 alias bottom="btm"
 alias lg="lazygit"
 alias fa="list_aliases"
@@ -62,6 +61,7 @@ alias chessx="nohup ~/Documents/Chess/Apps/chessx/release/chessx >/dev/null 2>&1
 pyenv init - | source
 alias py="python3"
 alias snake="python3"
+alias python="python3"
 
 # PNPM
 set -gx PNPM_HOME "/home/vieko/.local/share/pnpm"
