@@ -80,15 +80,15 @@ local user_plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      {
-        "3rd/image.nvim",
-        config = function()
-          require("image").setup()
-          package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
-          package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
-        end,
-        -- rocks = { "magick" },
-      },
+      -- {
+      --   "3rd/image.nvim",
+      --   config = function()
+      --     require("image").setup()
+      --     package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
+      --     package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
+      --   end,
+      --   rocks = { "magick" },
+      -- },
     },
     config = function()
       require("vieko.plugins.configs.neo-tree")
