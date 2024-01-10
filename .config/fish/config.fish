@@ -50,8 +50,8 @@ alias iotop="sudo iotop"
 alias heptabase="nohup ~/AppImages/Heptabase-1.9.0.AppImage >/dev/null 2>&1 disown"
 
 # FIXES
-alias fixeasy="pw-metadata -n settings 0 clock.force-quantum 2048"
-alias fefx="pw-metadata -n settings 0 clock.force-quantum 2048"
+alias fixeasy="~/.config/functions/reset-easyeffects.sh"
+alias fefx="~/.config/functions/reset-easyeffects.sh"
 alias toggledns="~/.config/functions/toggle-dns.sh"
 alias resetaudio="~/.config/functions/reset-audio.sh"
 
@@ -64,8 +64,9 @@ alias py="python3"
 alias snake="python3"
 alias python="python3"
 
-# PNPM
+# pnpm
 set -gx PNPM_HOME "/home/vieko/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
+# pnpm end
