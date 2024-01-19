@@ -22,7 +22,7 @@ local user_plugins = {
   {
     "windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup({})
+      require("vieko.plugins.configs.autopairs")
     end,
   },
   -- { "mattn/emmet-vim" },
@@ -170,7 +170,7 @@ local user_plugins = {
   -- TREE SITTER
   {
     "nvim-treesitter/nvim-treesitter",
-    requires = { "JoosepAlviste/nvim-ts-context-commentstring" },
+    requires = { "JoosepAlviste/nvim-ts-context-commentstring", "windwp/nvim-ts-autotag" },
     run = function()
       require("nvim-treesitter.install").update({ with_sync = true })()
     end,
