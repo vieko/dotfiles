@@ -62,6 +62,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 })
 
 local function on_attach(client, bufnr)
+  -- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition [LSP]", buffer = bufnr })
   vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { desc = "Go to Type Definition", buffer = bufnr })
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to Declaration [LSP]", buffer = bufnr })
@@ -152,6 +153,19 @@ lspconfig.cssls.setup({
     },
   },
 })
+-- lspconfig.emmet_ls.setup({
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = { "css", "html", "javascript", "javascriptreact", "typescriptreact" },
+--   init_options = {
+--     html = {
+--       options = {
+--         -- https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+--         ["bem.enabled"] = true,
+--       },
+--     },
+--   },
+-- })
 
 -- TAILWIND CSS
 -- local tw_highlight = require("tailwind-highlight")

@@ -25,7 +25,14 @@ local user_plugins = {
       require("nvim-autopairs").setup({})
     end,
   },
-  { "mattn/emmet-vim" },
+  -- { "mattn/emmet-vim" },
+  -- Fixes issue with emmet-vim when expanding lines with colon in them (tailwind)
+  {
+    "petter/emmet-vim",
+    config = function()
+      require("vieko.plugins.configs.emmet")
+    end,
+  },
   {
     "kevinhwang91/nvim-bqf",
     ft = "qf",
@@ -123,6 +130,8 @@ local user_plugins = {
       { "williamboman/mason-lspconfig.nvim" },
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
       { "jayp0521/mason-nvim-dap.nvim" },
+      -- EMMET
+      -- { "aca/emmet-ls" },
       -- LUA SPECIFIC
       { "folke/neodev.nvim" },
       -- PYTHON SPECIFIC

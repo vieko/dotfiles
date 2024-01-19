@@ -47,7 +47,7 @@ alias iftop="sudo iftop"
 alias iotop="sudo iotop"
 
 # APPIMAGES
-alias heptabase="nohup ~/AppImages/Heptabase-1.9.0.AppImage >/dev/null 2>&1 disown"
+alias heptabase="nohup ~/AppImages/Heptabase.AppImage >/dev/null 2>&1 disown"
 
 # FIXES
 alias fixeasy="~/.config/functions/reset-easyeffects.sh"
