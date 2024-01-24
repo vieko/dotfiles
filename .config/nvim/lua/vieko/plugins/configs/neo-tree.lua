@@ -7,7 +7,7 @@ require("neo-tree").setup({
     "git_status",
     "document_symbols",
   },
-  close_if_last_window = true,
+  close_if_last_window = false,
   default_component_configs = {
     diagnostics = {
       symbols = {
