@@ -30,12 +30,13 @@ alias sc="source ~/.config/fish/config.fish"
 alias cl="clear"
 alias re="reset"
 alias pn="pnpm"
+alias upn="~/.config/functions/update-pnpm.sh"
 
 # EDITOR
 alias vi="nvim"
 alias vim="nvim"
-alias summon="nvim"
 alias demons="nvim"
+alias summon="tmux"
 
 # APT
 alias apt="sudo apt-get"
