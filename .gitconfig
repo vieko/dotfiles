@@ -65,10 +65,9 @@
 	# commit
 	cm = commit -m
 	cma = commit -a -m
-	a = commit --amend --no-edit
-	amend = commit --amend --no-edit
-	ca = commit --amend --no-edit
-	caa = commit -a --amend --no-edit -C HEAD
+	ca = commit --amend
+	amend = commit --amend
+	caa = commit -a --amend -C HEAD
 	# log
 	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=relative
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [a:%an,c:%cn]" --decorate --numstat
@@ -81,9 +80,6 @@
   dc = diff --cached
   dlc = diff --cached HEAD^
   dr  = "!f() { git diff -w "$1"^.."$1"; }; f"
-  # rebase
-  rb = pull --rebase
-  rbu = pull --rebase upstream main
   # reset
   r1 = reset HEAD^
   r2 = reset HEAD^^
