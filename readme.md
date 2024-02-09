@@ -7,3 +7,4 @@ https://www.atlassian.com/git/tutorials/dotfiles
 ## TODO ON NYX
 - REPLACE `batcat` with `bat` from dep
 - INSTALL `eza` and `z`
+- INSTALL git-delta
