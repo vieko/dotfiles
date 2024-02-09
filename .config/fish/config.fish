@@ -13,16 +13,11 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias y="xclip -selection clipboard -in"
 alias p="xclip -selection clipboard -out"
 
-# DIRECTORY
-alias l="exa -1"
-alias ll="exa -lg"
-alias la="LC_COLLATE=c exa -la"
-
-#CONVENIENCE
+# CONVENIENCE
 alias fd="fdfind"
 alias rm="trash"
 alias st="fast"
-alias bat="batcat"
+# alias bat="batcat"
 alias bottom="btm"
 alias lg="lazygit"
 alias fa="list_aliases"
