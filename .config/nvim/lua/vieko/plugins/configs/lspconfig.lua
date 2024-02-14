@@ -72,6 +72,8 @@ local function on_attach(client, bufnr)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Show References [LSP]", buffer = bufnr })
   vim.keymap.set("n", "<c-s>", vim.lsp.buf.signature_help, { desc = "Show Signature Help [LSP]", buffer = bufnr })
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show on Hover", buffer = bufnr })
+  vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { desc = "Go to Next Diagnostics [LSP]", buffer = bufnr })
+  vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { desc = "Go to Previous Diagnostics [LSP]", buffer = bufnr })
   vim.keymap.set("n", "<leader>af", vim.lsp.buf.code_action, { desc = "Code Action [LSP]", buffer = bufnr })
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename [LSP]", buffer = bufnr })
   vim.keymap.set(

@@ -1,7 +1,5 @@
 local M = {}
 
----@param ns string
----@return nil
 function M.reload_config(ns)
   ns = ns or "vieko"
 
