@@ -54,10 +54,8 @@ catppuccin.setup({
       alt_background = false,
     },
     cmp = true,
-    dap = {
-      enabled = true,
-      enable_ui = true,
-    },
+    dap = true,
+    dap_ui = true,
     leap = false,
     mason = false,
     native_lsp = {

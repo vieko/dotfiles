@@ -20,6 +20,7 @@ vim.opt.history = 100
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
+vim.opt.inccommand = "nosplit"
 vim.opt.infercase = true
 vim.opt.laststatus = 3
 vim.opt.linebreak = true
@@ -42,7 +43,7 @@ vim.opt.scrolloff = 8
 vim.opt.shell = "fish"
 vim.opt.shiftwidth = 2
 vim.opt.showmatch = false
-vim.opt.showmode = true -- false
+vim.opt.showmode = false
 vim.opt.showtabline = 0
 vim.opt.shortmess:append("c")
 vim.opt.sidescrolloff = 8

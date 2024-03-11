@@ -27,7 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- close buffers
-vim.keymap.set("n", "<Leader>x", "<Cmd>bd<CR>", { desc = "Close current Buffer" })
+vim.keymap.set("n", "<Leader>x", "<Cmd>lua CloseOrQuit()<CR>", { desc = "Close current Buffer" })
 vim.keymap.set("n", "<Leader>xx", "<Cmd>%bd<CR>", { desc = "Close all Buffers" })
 vim.keymap.set("n", "<Leader>xo", "<Cmd>%bd<Bar>e#<Bar>bd#<CR>", { desc = "Close all Buffers, but Current" })
 vim.keymap.set("n", "<C-c>", "<Cmd>bp|bd #<CR>", { desc = "Close Buffer, except the last one" })
@@ -39,6 +39,17 @@ vim.keymap.set("n", "<Leader>l", "<C-w><C-l>", { desc = "Move cursor left window
 vim.keymap.set("n", "<Leader>h", "<C-w><C-h>", { desc = "Move cursor right window" })
 vim.keymap.set("n", "<Leader>r", ":%s/<C-r><C-w>/", { desc = "Replace Word" })
 vim.keymap.set("n", "<Leader>w", "<Cmd>write<CR>", { desc = "Save current File" })
+
+-- make windows roughly the same size
+vim.keymap.set("n", "<A-=>", "<C-W>=")
+
+-- size windows horizontally
+vim.keymap.set("n", "<A-.>", "<C-W>>")
+vim.keymap.set("n", "<A-,>", "<C-W><")
+
+-- size windows vertically
+vim.keymap.set("n", "<A-t>", "<C-W>+")
+vim.keymap.set("n", "<A-s>", "<C-W>-")
 
 -- move between buffers
 vim.keymap.set("n", "<Tab>", ":lua BufferNavigation('next')<CR>", { desc = "Go to next Buffer" })
@@ -82,3 +93,6 @@ vim.api.nvim_set_keymap(
 
 -- trigger emmet with <C-k>
 vim.api.nvim_set_keymap("i", "<C-k>", "<Plug>(emmet-expand-abbr)", { noremap = false })
+
+-- shrug
+vim.keymap.set("i", ",shrug", "¯\\_(ツ)_/¯", { noremap = true, silent = true, expr = false })

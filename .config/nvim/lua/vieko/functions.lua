@@ -111,3 +111,12 @@ function Cycle_window_layouts()
   end
   vim.g.current_layout_cycle = current_layout
 end
+
+-- function to close or quite the buffer
+function CloseOrQuit()
+  if #vim.api.nvim_list_wins() > 1 then
+    vim.cmd("close")
+  else
+    vim.cmd("bd")
+  end
+end
