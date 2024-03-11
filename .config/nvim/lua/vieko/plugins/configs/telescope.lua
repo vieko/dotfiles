@@ -32,6 +32,10 @@ vim.keymap.set("n", "<Leader>c", function()
   telescope_builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "Find Files within Config" })
 
+vim.keymap.set("n", "<leader>/", function()
+  telescope_builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({ previewer = false }))
+end, { desc = "Fuzzy Search Current Buffer" })
+
 vim.keymap.set("n", "<Leader>ff", function()
   telescope_builtin.live_grep()
 end, { desc = "Grep Files" })
@@ -44,6 +48,10 @@ vim.keymap.set("n", "<Leader>fb", function()
   telescope_builtin.buffers()
 end, { desc = "Show Buffers" })
 
+vim.keymap.set("n", "<Leader>fk", function()
+  telescope_builtin.keymaps()
+end, { desc = "Show Keymaps" })
+
 vim.keymap.set("n", "<Leader>gs", function()
   telescope_builtin.git_status()
-end, { desc = "Git Status" })
+end, { desc = "Show Git Status" })
