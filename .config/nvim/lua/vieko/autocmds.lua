@@ -1,4 +1,5 @@
-local C = require("catppuccin.palettes").get_palette("mocha")
+local C = LoadCatppuccinPalette()
+
 local U = {
   pink = "#F859A8",
 }
@@ -15,14 +16,14 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 -- Transparent highlights
 local function transparent_cb()
   vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = U.pink, bold = true })
+  vim.api.nvim_set_hl(0, "CursorLineNr", { fg = C.peach, bold = true })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE", fg = C.text })
   vim.api.nvim_set_hl(0, "ErrorFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "WarningFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "InfoFloat", { bg = "NONE" })
   vim.api.nvim_set_hl(0, "HintFloat", { bg = "NONE" })
-  vim.api.nvim_set_hl(0, "IncSearch", { bg = U.pink, fg = C.crust })
+  vim.api.nvim_set_hl(0, "IncSearch", { bg = C.peach, fg = C.crust })
 end
 
 local transparent_group = vim.api.nvim_create_augroup("TransparentGroup", { clear = true })

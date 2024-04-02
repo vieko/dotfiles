@@ -2,7 +2,7 @@
 -- Author: shadmansaleh
 -- Credit: glepnir
 local lualine = require("lualine")
-local C = require("catppuccin.palettes").get_palette("mocha")
+local C = LoadCatppuccinPalette()
 
 -- Color table for highlights
 -- stylua: ignore

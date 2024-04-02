@@ -1,10 +1,14 @@
 set fish_greeting
 
+# PATH
 set -Ux PAGER most
 set -Ux MANPAGER most
 set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 set -Ux TMPDIR /home/vieko/tmp
+
+# XDG
+set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME $HOME/.config
 
 # DOTFILES
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -49,6 +53,7 @@ alias heptabase="nohup ~/AppImages/Heptabase.AppImage >/dev/null 2>&1 disown"
 alias fixeasy="~/.config/functions/reset-easyeffects.sh"
 alias fefx="~/.config/functions/reset-easyeffects.sh"
 alias toggledns="~/.config/functions/toggle-dns.sh"
+alias toggletheme="~/.config/functions/toggle-theme.sh"
 alias resetaudio="~/.config/functions/reset-audio.sh"
 
 # GAMES

@@ -4,10 +4,14 @@ if not catppuccin then
   return
 end
 
-vim.g.catppuccin_flavour = "mocha"
+-- vim.g.catppuccin_flavour = "mocha"
 
 catppuccin.setup({
-  flavour = "mocha",
+  -- flavour = "mocha",
+  background = {
+    dark = "mocha",
+    light = "latte",
+  },
   transparent_background = false,
   show_end_of_buffer = false,
   term_colors = true,

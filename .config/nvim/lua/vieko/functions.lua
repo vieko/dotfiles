@@ -120,3 +120,4 @@ function CloseOrQuit()
     vim.cmd("bd")
   end
 end
+

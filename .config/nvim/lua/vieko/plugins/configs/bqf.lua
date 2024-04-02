@@ -1,4 +1,4 @@
--- local C = require("catppuccin.palettes").get_palette("mocha")
+local C = LoadCatppuccinPalette()
 
 vim.cmd([[
     hi BqfPreviewBorder guifg=#cdd6f4

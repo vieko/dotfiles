@@ -8,6 +8,7 @@ SETUVAR --export PAGER:most
 SETUVAR --export PYENV_ROOT:/home/vieko/\x2epyenv
 SETUVAR --export TMPDIR:/home/vieko/tmp
 SETUVAR --export VISUAL:nvim
+SETUVAR XDG_CONFIG_HOME:/home/vieko/\x2econfig
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/vieko/\x2elocal/share/z/data

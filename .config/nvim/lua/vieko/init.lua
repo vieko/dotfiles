@@ -25,16 +25,12 @@ local function init()
     cache_enabled = 0,
   }
 
-  -- vim.g.tmux_navigator_no_wrap = 1
-  -- vim.g.tmux_navigator_save_on_switch = 2
-end
-
-local function debug()
-  vim.lsp.set_log_level("debug")
+  vim.opt.background = "dark"
 end
 
 function M.setup()
   init()
+  require("vieko.toggle")
   require("vieko.autocmds")
   require("vieko.keymaps")
   require("vieko.options")
@@ -44,7 +40,7 @@ function M.setup()
   if vim.g.vscode then
     require("vieko.vscode")
   end
-  --debug()
+  -- vim.lsp.set_log_level("debug")
 end
 
 return M
