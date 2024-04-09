@@ -2,10 +2,12 @@
 * OVERRIDE
 [rshf]>[lshf]
 * LEFT THUMBS MODS
+[lctr]>[lwin]
 [del]>[lctr]
 [home]>[lshf]
 [end]>[esc]
 * RIGHT THUMBS MODS
+[rctr]>[lwin]
 [rwin]>[ralt]
 [pgup]>[lshf]
 [pgdn]>[esc]
