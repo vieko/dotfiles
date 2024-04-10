@@ -30,7 +30,8 @@ alias cl="clear"
 alias re="reset"
 alias pn="pnpm"
 alias upn="~/.config/functions/update-pnpm.sh"
-alias keys="setxkbmap real-prog-qwerty"
+alias prog="setxkbmap real-prog-qwerty"
+alias keys="setxkbmap us"
 
 # EDITOR
 alias vi="nvim"
