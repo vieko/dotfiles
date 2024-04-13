@@ -1,8 +1,8 @@
 local C = LoadCatppuccinPalette()
 
-local U = {
-  pink = "#F859A8",
-}
+-- local U = {
+--   pink = "#F859A8",
+-- }
 
 -- refresh buffers when files change on disk
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {

@@ -1,5 +1,6 @@
 -- SET Leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- DISABLE Arrows
 vim.keymap.set("n", "<Up>", "")

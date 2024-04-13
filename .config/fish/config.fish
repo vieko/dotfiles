@@ -7,6 +7,9 @@ set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 set -Ux TMPDIR /home/vieko/tmp
 
+# CURSORS
+# set fish_cursor_default block
+
 # XDG
 set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME $HOME/.config
 
@@ -21,7 +24,6 @@ alias p="xclip -selection clipboard -out"
 alias fd="fdfind"
 alias rm="trash"
 alias st="fast"
-# alias bat="batcat"
 alias bottom="btm"
 alias lg="lazygit"
 alias fa="list_aliases"
@@ -38,6 +40,8 @@ alias vi="nvim"
 alias vim="nvim"
 alias demons="nvim"
 alias summon="tmux"
+alias kickstart='NVIM_APPNAME="kickstart" nvim'
+alias ks='NVIM_APPNAME="kickstart" nvim'
 
 # APT
 alias apt="sudo apt-get"

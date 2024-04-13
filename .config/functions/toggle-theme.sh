@@ -4,7 +4,7 @@
 
 LIGHTTHEME="catppuccin-latte"
 DARKTHEME="catppuccin-mocha"
-VIMCONF="$HOME/.config/nvim/lua/vieko/init.lua"
+VIMCONF="$HOME/.config/kickstart/init.lua"
 KITTYCONF="$HOME/.config/kitty/themes.conf"
 TMUXCONF="$HOME/.config/tmux/tmux.conf"
 CURRENT_MODE=$(gsettings get org.gnome.desktop.interface color-scheme)
@@ -18,7 +18,7 @@ if [ "$CURRENT_MODE" = "'prefer-dark'" ]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-light' 
   gsettings set org.gnome.desktop.interface gtk-theme 'Pop'
   sed -i "s/$DARKTHEME/$LIGHTTHEME/" "$TMUXCONF" "$KITTYCONF"
-  sed -i 's/dark/light/' "$VIMCONF"
+  sed -i '/vim.opt.background/s/"dark"/"light"/g' "$VIMCONF" 
   fish -c 'set -Ux FZF_DEFAULT_OPTS "\
   --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
   --color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
@@ -31,7 +31,7 @@ else
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   gsettings set org.gnome.desktop.interface gtk-theme 'Pop-dark'
   sed -i "s/$LIGHTTHEME/$DARKTHEME/" "$TMUXCONF" "$KITTYCONF"
-  sed -i 's/light/dark/' "$VIMCONF"
+  sed -i '/vim.opt.background/s/"light"/"dark"/g' "$VIMCONF" 
   fish -c 'set -Ux FZF_DEFAULT_OPTS "\
   --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
   --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
