@@ -36,12 +36,12 @@ alias prog="setxkbmap real-prog-qwerty"
 alias keys="setxkbmap us"
 
 # EDITOR
-alias vi="nvim"
-alias vim="nvim"
-alias demons="nvim"
-alias summon="tmux"
-alias kickstart='NVIM_APPNAME="kickstart" nvim'
+alias kick='NVIM_APPNAME="kickstart" nvim'
 alias ks='NVIM_APPNAME="kickstart" nvim'
+alias vim='NVIM_APPNAME="kickstart" nvim'
+alias vi='NVIM_APPNAME="kickstart" nvim'
+alias demons='NVIM_APPNAME="kickstart" nvim'
+alias summon="tmux"
 
 # APT
 alias apt="sudo apt-get"
