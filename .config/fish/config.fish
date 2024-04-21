@@ -41,7 +41,7 @@ alias ks='NVIM_APPNAME="kickstart" nvim'
 alias vim='NVIM_APPNAME="kickstart" nvim'
 alias vi='NVIM_APPNAME="kickstart" nvim'
 alias demons='NVIM_APPNAME="kickstart" nvim'
-alias summon="tmux"
+alias summon="~/.config/functions/set-default-session-name.sh"
 
 # APT
 alias apt="sudo apt-get"
