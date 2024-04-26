@@ -36,11 +36,9 @@ alias prog="setxkbmap real-prog-qwerty"
 alias keys="setxkbmap us"
 
 # EDITOR
-alias kick='NVIM_APPNAME="kickstart" nvim'
-alias ks='NVIM_APPNAME="kickstart" nvim'
-alias vim='NVIM_APPNAME="kickstart" nvim'
-alias vi='NVIM_APPNAME="kickstart" nvim'
-alias demons='NVIM_APPNAME="kickstart" nvim'
+alias vi='NVIM_APPNAME="init.lua" nvim'
+alias vim='NVIM_APPNAME="init.lua" nvim'
+alias demons='NVIM_APPNAME="init.lua" nvim'
 alias summon="~/.config/functions/set-default-session-name.sh"
 
 # APT
