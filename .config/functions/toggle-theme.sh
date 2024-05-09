@@ -4,7 +4,7 @@
 
 LIGHTTHEME="catppuccin-latte"
 DARKTHEME="catppuccin-mocha"
-VIMCONF="$HOME/.config/init.lua/init.lua"
+VIMCONF="$HOME/.config/init.lua/lua/vieko/plugins/catppuccin.lua"
 KITTYCONF="$HOME/.config/kitty/themes.conf"
 TMUXCONF="$HOME/.config/tmux/tmux.conf"
 CURRENT_MODE=$(gsettings get org.gnome.desktop.interface color-scheme)
